@@ -6,3 +6,24 @@
     <br>
 </h1>
 #GNOME Shell Extension Reference
+
+This is an unofficial reference guide for GNOME Shell extensions
+You will need to know javascript, css and xml in order to create a beautiful GNOME Shell Extension
+
+### Useful reference
+[GNOME Shell Github Page](https://github.com/GNOME/gnome-shell)
+[GNOME Shell UI FIles](https://github.com/GNOME/gnome-shell/tree/master/js/ui)
+[GNOME Shell CSS Code](https://github.com/GNOME/gnome-shell/blob/master/data/theme/gnome-shell.css)
+[Eloquent Javascript Ch 1-6](http://eloquentjavascript.net/)
+[XML](http://www.w3schools.com/xml/xml_whatis.asp)
+[CSS](http://www.w3schools.com/css/css_syntax.asp)
+
+- [] Step by step tutorial
+- [] Complete Reference
+
+Any contribution to this guide is welcomed
+
+
+##Items
+
+* [JS Source Documentation](https://github.com/julio641742/gnome-shell-extension-reference/blob/master/REFERENCE.md)
