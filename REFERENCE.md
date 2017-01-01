@@ -126,11 +126,11 @@ This is a summary of the UI Files.
 
 #Overview of classes in each file
 
-##accessDialog.js
+## accessDialog.js
 
 
-##altTab.js
+## altTab.js
 
-##animation.js
+## animation.js
 
-##appDisplay.js
+## appDisplay.js
