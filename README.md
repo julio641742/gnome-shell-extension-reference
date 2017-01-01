@@ -1,4 +1,6 @@
-![Gnome Shell Extension Reference](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/gnome-logo.png)
+<div align="center">
+    ![Gnome Shell Extension Reference](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/gnome-logo.png)
+</div>
 
 #GNOME Shell Extension Reference
 
