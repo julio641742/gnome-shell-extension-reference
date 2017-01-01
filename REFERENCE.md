@@ -149,7 +149,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - AnimatedIcon: 
 
 ## appDisplay.js
-![appDisplay.js](./media/gnome-shell-overlay-mode-applications.png)
+![appDisplay.js](/media/gnome-shell-overlay-mode-applications.png)
 - BaseAppView: 
 - PageIndicatorsActor: 
 - PageIndicators: 
@@ -183,13 +183,13 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - BackgroundMenu: 
 
 ## boxpointer.js
-![BoxPointer.js](./media/boxpointer.png)
+![BoxPointer.js](/media/boxpointer.png)
 > BoxPointer is the triangle bit
 
 - BoxPointer: The triangle arrow connecting a [popupMenu](#popupmenujs) to its source (you can configure what side of the menu the pointer appears).
 
 ## calendar.js
-![Calendar.js](./media/calendar.png)
+![Calendar.js](/media/calendar.png)
 - CalendarEvent: 
 - EmptyEventSource: 
 - DBusEventSource: 
@@ -205,11 +205,13 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - CheckBox: 
 
 ## ctrlAltTab.js
+![ctrlAltTab.js](/media/ctrlalttab.png)
 - CtrlAltTabManager: 
 - CtrlAltTabPopup: 
 - CtrlAltTabSwitcher: 
 
 ## dash.js
+![dash.js](/media/dash.png)
 - DashItemContainer: 
 - ShowAppsIcon: 
 - DragPlaceholderItem: 
@@ -357,6 +359,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - ControlsManager: 
 
 ## overview.js
+![overview.js](/media/gnome-shell-overlay-mode-windows.png)
 - ShellInfo: 
 - Overview: 
 

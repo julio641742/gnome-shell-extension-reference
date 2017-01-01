@@ -1,6 +1,6 @@
 <h1 align="center">
     <br>
-    <img width="400" src="./media/gnome-logo.png" alt="Gnome Shell Extension Reference">
+    <img width="400" src="/media/gnome-logo.png" alt="Gnome Shell Extension Reference">
     <br>
     <br>
     <br>
