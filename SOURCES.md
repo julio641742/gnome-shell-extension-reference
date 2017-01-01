@@ -1,0 +1,5 @@
+https://wiki.gnome.org/Projects/GnomeShell/Extensions/StepByStepTutorial#knowingJavascript-introducingJavascript
+https://wiki.gnome.org/Projects/GnomeShell/Development
+https://www.abidibo.net/blog/2016/03/02/how-i-developed-my-first-gnome-shell-extension/
+http://mathematicalcoffee.blogspot.it/2012/09/gnome-shell-extensions-getting-started.html
+http://mathematicalcoffee.blogspot.it/2012/09/gnome-shell-javascript-source.html
