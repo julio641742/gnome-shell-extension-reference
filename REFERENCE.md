@@ -5,7 +5,7 @@ This is a summary of the UI Files.
 #####Notes
 - The actual version of GNOME Shell as of today is 3.22
 - This is just a reference list, not full documentation or anything.
-- Use this to get a quick ide of what is in what file.
+- Use this to get a quick idea of what is in what file.
 - I might not be correct
 - Contributions are welcome
 
@@ -127,10 +127,13 @@ This is a summary of the UI Files.
 #Overview of classes in each file
 
 ## accessDialog.js
-
+test1
 
 ## altTab.js
+test2
 
 ## animation.js
+test3
 
 ## appDisplay.js
+test4
