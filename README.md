@@ -1,15 +1,6 @@
-<h1 align="center">
-    <br>
-    ![Gnome Shell Extension Reference](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/gnome-logo.png)
-    <br>
-    <br>
-    <br>
-</h1>
-#GNOME Shell Extension Reference
-![GNOME Shell](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/gnome-shell-overview.png)
-![GNOME Shell](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/gnome-shell-overlay-mode-applications.png)
-![GNOME Shell](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/gnome-shell-overlay-mode-windows.png)
+![Gnome Shell Extension Reference](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/gnome-logo.png)
 
+#GNOME Shell Extension Reference
 
 This is an unofficial reference guide for GNOME Shell extensions
 
