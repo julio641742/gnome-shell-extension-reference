@@ -127,14 +127,20 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 #Overview of classes in each file
 
 ## accessDialog.js
+- AccessDialog:
+- AccessDialogDBus:
 ## altTab.js
 ## animation.js
 ## appDisplay.js
 ## appFavorites.js
+- AppFavorites: Handles your list of app favourites - updates the list when you choose `Add to Favourite`, provides API for you to add/remove from your favourites
 ## audioDeviceSelection.js
 ## background.js
 ## backgroundMenu.js
 ## boxpointer.js
+![BoxPointer.js](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/boxpointer.png)
+> BoxPointer is the triangle bit
+- BoxPointer: The triangle arrow connecting a popupmenu to its source (you can configure what side of the menu the pointer appears).
 ## calendar.js
 ## checkBox.js
 ## ctrlAltTab.js
