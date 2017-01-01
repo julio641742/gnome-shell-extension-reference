@@ -200,7 +200,8 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - EventsSection: 
 - NotificationSection: 
 - Placeholder: 
-- CalendarMessageList: Notification section 
+- CalendarMessageList: Notification section
+
 See also [dateMenu.js](#datemenujs) which ties all these elements together
 
 ## checkBox.js
@@ -231,7 +232,8 @@ See also [dateMenu.js](#datemenujs) which ties all these elements together
 - MessagesIndicator: 
 - IndicatorPad: 
 - FreezableBinLayout: 
-- DateMenuButton: Subclass of `[PanelMenu.Button](#panelmenujs)` to provide the date menu in the middle top panel.
+- DateMenuButton: Subclass of [PanelMenu.Button](#panelmenujs) to provide the date menu in the middle top panel.
+
 See also [calendar.js](#calendarjs)
 
 ## dnd.js
@@ -261,6 +263,7 @@ This module sets upd the `GJS` environment for the rest of the JS files:
 
 ## extensionDownloader.js
 ![extensionDownloader.js](/media/extensiondownloader.png)
+
 This is a collection of functions to do with installing, updating and uninstalling extensions
 > The extension UUID is like `extensionname@some.website.com`
 
@@ -298,7 +301,7 @@ This is a collection of functions to do with enabling and disabling extensions, 
 ![keyboard.js](/media/keyboard.png)
 - Key: A key on the keyboard
 - Keyboard: The `Keyboard` class
-- KeyboardSource: Inherits from `[MessageTray.Source](#messagetrayjs)`, shows the keyboard in the message tray
+- KeyboardSource: Inherits from [MessageTray.Source](#messagetrayjs), shows the keyboard in the message tray
 - ShellWaylandAdapter: 
 
 ## layout.js
@@ -363,6 +366,7 @@ This is a collection of functions to do with enabling and disabling extensions, 
 
 ## modalDialog.js
 - ModalDialog: A handy class defining a modal dialog. Use `.setButtons` to add buttons to it, and `open/close` to show or hide it.
+
 Examples [endSessionDialog.js](#endsessiondialogjs), [extensionDownloader.js](#extensiondownloaderjs)...
 
 ## mpris.js
