@@ -319,16 +319,27 @@ This is a collection of functions to do with enabling and disabling extensions, 
 - Lightbox: A shade obscuring the specific container actor
 
 ## lookingGlass.js
-- AutoComplete: 
-- Notebook: 
-- ObjLink: 
-- Result: 
-- WindowList: 
-- ObjInspector: 
-- RedBorderEffect: 
-- Inspector: 
-- Extensions: 
-- LookingGlass: 
+![lookingGlass.js](/media/lookingglass-autocomplete.png)
+> Autocomplete function in the Looking Glass
+
+![lookingGlass.js](/media/lookingglass-inspector.png)
+> Looking Glass Inspector - outlines the actor your mouse is over and lets you pick it
+
+![lookingGlass.js](/media/lookingglass-objinspector.png)
+> Looking Glass ObjInspector - inspecting `Main.panel.statusArea.dateMenu`
+
+- AutoComplete: Adds completion behaviour on `Tab/double-Tab` to the Looking Glass like the terminal
+- Notebook: The Looking Glass consists of `Inspector/Evaluator/Windows/Extensions`. The notebook is what holds them all
+- ObjLink: When you type thing into the Looking Glass console the results are clickable. This class handles those links 
+- Result: When you type things into the Looking Glass the results get printed like so: 
+> r(result_number) = result
+
+- WindowList: The `Windows` tab of the Looking Glass
+- ObjInspector: When you click on a result in the Looking Glass you get a window that shows you more information about that result. Clicking on an object will show some of its properties. This is that class
+- RedBorderEffect: When you **pick** an object with the `Inspector`. There is a red border around the selected object. This class handles adding and removing these borders
+- Inspector: There is a `picker` icon. When you select it, you can **pick** an object from the stage to examine further. As you move your pointer over particular objects, they get a red border drawn around them. The `Inspector` class handles tracking which object your pointer is over
+- Extensions: The `Extensions` tab in the Looking Glass
+- LookingGlass: Assembles the whole Looking Glass together. Also privedes the `Evaluator` tab and handles the actual evaluation of commands typed into the console
 
 ## magnifierDBus.js
 - ShellMagnifier: 
