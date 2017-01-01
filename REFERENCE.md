@@ -186,7 +186,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 ![BoxPointer.js](/media/boxpointer.png)
 > BoxPointer is the triangle bit
 
-- BoxPointer: The triangle arrow connecting a [popupMenu](#popupmenujs) to its source (you can configure what side of the menu the pointer appears).
+- BoxPointer: The triangle arrow connecting a `[popupMenu](#popupmenujs)` to its source (you can configure what side of the menu the pointer appears).
 
 ## calendar.js
 ![Calendar.js](/media/calendar.png)
@@ -223,7 +223,7 @@ See also [dateMenu.js](#datemenujs) which ties all these elements together
 - Dash: The master `Dash` class, making use of all the other classes
 
 ## dateMenu.js
-![dash.js](/media/dash.png)
+![dash.js](/media/datemenu.png)
 > The date menu. Red: DateMenuButton, Green: TodayButton, Yellow: WorldClockSection
 
 - TodayButton: 
@@ -231,7 +231,7 @@ See also [dateMenu.js](#datemenujs) which ties all these elements together
 - MessagesIndicator: 
 - IndicatorPad: 
 - FreezableBinLayout: 
-- DateMenuButton: Subclass of [PanelMenu.Button](#panelmenujs) to provide the date menu in the middle top panel.
+- DateMenuButton: Subclass of `[PanelMenu.Button](#panelmenujs)` to provide the date menu in the middle top panel.
 See also [calendar.js](#calendarjs)
 
 ## dnd.js
@@ -251,11 +251,33 @@ This allow you to add `drag-and-drop` functionality to your own classes. You use
 - EndSessionDialog: The end session dialog. Handles the UI part. In terms of actually `logging out/shutting down/etc` the dialog simply sends a message to the GNOME `SessionManager` DBus to request a shutdown rather thant doing the shutdown itself
 
 ## environment.js
+This module sets upd the `GJS` environment for the rest of the JS files:
+- Adds up the `global` object to the environment
+- Adds the `add` function to `St.BoxLayout`
+- Adds the `child_set` function to `St.BoxLayout`, `Clutter.TableLayout`, `Clutter.GridLayout` and `Clutter.BoxLayout`
+- Adds/Improevs the `toString()` function
+- Adds method `String.format`
+- Initialises various things the shell needs to work
 
 ## extensionDownloader.js
-- InstallExtensionDialog: 
+![extensionDownloader.js](/media/extensiondownloader.png)
+This is a collection of functions to do with installing, updating and uninstalling extensions
+> The extension UUID is like `extensionname@some.website.com`
+
+- installExtension: Installs an extension by UUID by downloading it form [GNOME Shell Extensions](https://extensions.gnome.org/)
+- uninstallExtension: Uninstalls an extension by UUID
+- updateExtension: Updates an extension by UUID
+
+- InstallExtensionDialog: The dialog that pops up when you choose to install an extension from [GNOME Shell Extensions](https://extensions.gnome.org/) confirming that you want to install the extension
 
 ## extensionSystem.js
+This is a collection of functions to do with enabling and disabling extensions, and accessing their metadata
+> You can access extensions and their metadata using `imports.misc.extensionUtils.extensions`. Use `imports.misc.extensionUtils.getCurrentExtension()` from withing an extension to get the object for that extension
+
+> The extension UUID is like `extensionname@some.website.com`
+
+- disableExtension: Disables an extension by UUID
+- enableExtension: Enables an extension by UUID
 
 ## focusCaretTracker.js
 - FocusCaretTracker: 
@@ -268,21 +290,22 @@ This allow you to add `drag-and-drop` functionality to your own classes. You use
 - CandidatePopup: 
 
 ## iconGrid.js
-- BaseIcon: 
-- IconGrid: 
+- BaseIcon: A basic icon class consisting of an icon and a label
+- IconGrid: A widget displaying its children in a grid allowing you to set a row limit or column limit, and actors that don't fit in will not be painted
 - PaginatedIconGrid: 
 
 ## keyboard.js
-- Key: 
-- Keyboard: 
-- KeyboardSource: 
+![keyboard.js](/media/keyboard.png)
+- Key: A key on the keyboard
+- Keyboard: The `Keyboard` class
+- KeyboardSource: Inherits from `[MessageTray.Source](#messagetrayjs)`, shows the keyboard in the message tray
 - ShellWaylandAdapter: 
 
 ## layout.js
 - MonitorConstraint: 
 - Monitor: 
-- LayoutManager: 
-- HotCorner: 
+- LayoutManager: Manages layout of items on the stage `message tray/top panel/hot corners` and updates when monitors change
+- HotCorner: Hot corners. The `Top Left` hot corner lets you switch to the overview
 - PressureBarrier: 
 
 ## legacyTray.js
@@ -290,7 +313,7 @@ This allow you to add `drag-and-drop` functionality to your own classes. You use
 
 ## lightbox.js
 - RadialShaderQuad: 
-- Lightbox: 
+- Lightbox: A shade obscuring the specific container actor
 
 ## lookingGlass.js
 - AutoComplete: 
@@ -309,9 +332,10 @@ This allow you to add `drag-and-drop` functionality to your own classes. You use
 - ShellMagnifierZoomRegion: 
 
 ## magnifier.js
-- Magnifier: 
-- ZoomRegion: 
-- Crosshairs: 
+![magnifier.js](/media/magnifier.png)
+- Magnifier: Defines the shell magnifier
+- ZoomRegion: Defines a particular zoom region
+- Crosshairs: Defines the crosshairs of the magnifier
 - MagShaderEffects: 
 
 ## main.js
@@ -338,7 +362,8 @@ This allow you to add `drag-and-drop` functionality to your own classes. You use
 - SystemNotificationSource: 
 
 ## modalDialog.js
-- ModalDialog: 
+- ModalDialog: A handy class defining a modal dialog. Use `.setButtons` to add buttons to it, and `open/close` to show or hide it.
+Examples [endSessionDialog.js](#endsessiondialogjs), [extensionDownloader.js](#extensiondownloaderjs)...
 
 ## mpris.js
 - MediaMessage: 
