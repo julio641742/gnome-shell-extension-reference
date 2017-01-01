@@ -25,15 +25,15 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 * [boxpointer.js](#boxpointerjs): Whenever you open a popup menu there's a little arrow connecting the button to the menu. That's what this is.
 * [calendar.js](#calendarjs): Stuff to do with the calendar in the clock dropdown menu
 * [checkBox.js](#checkboxjs):
-* [ctrlAltTab.js](#ctrlalttabjs): Handles the Accessibility switcher which lets you select UI elements 
+* [ctrlAltTab.js](#ctrlalttabjs): Handles the Accessibility switcher which lets you select UI elements. It appears when you press `CTRL + ALT + Tab`
 * [dash.js](#dashjs): This is the bar that you have at the left in overview
 * [dateMenu.js](#datemenujs): The graphical calendar widget in the calendar menu
 * [dnd.js](#dndjs): Handles drag and drop
 * [edgeDragAction.js](#edgedragactionjs)
-* [endSessionDialog.js](#endsessiondialogjs): The dialog that appears when you log out/shutdown/etc
+* [endSessionDialog.js](#endsessiondialogjs): The dialog that appears when you `log out/shutdown/etc`
 * [environment.js](#environmentjs): Sets upd the GJS environment for the rest of the code
-* [extensionDownloader.js](#extensiondownloaderjs): Handles installing, uninstalling, downloading, and updating extensions
-* [extensionSystem.js](#extensionsystemjs): Handles installing, enabling, and disabling extensions
+* [extensionDownloader.js](#extensiondownloaderjs): Handles `installing, uninstalling, downloading, and updating` extensions
+* [extensionSystem.js](#extensionsystemjs): Handles `installing, enabling, and disabling` extensions
 * [focusCaretTracker.js](#focuscarettrackerjs)
 * [grabHelper.js](#grabhelperjs)
 * [ibusCandidatePopup.js](#ibuscandidatepopupjs)
@@ -48,7 +48,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 * [main.js](#mainjs): This is what defines most of the global object instances in GNOME Shell and sets everything up
 * [messageList.js](#messagelistjs)
 * [messageTray.js](#messagetrayjs): The instance of the message tray
-* [modalDialog.js](#modaldialogjs): Defines the GNOME Shell popup dialogs log out/shutdown/authentication/etc
+* [modalDialog.js](#modaldialogjs): Defines the GNOME Shell popup dialogs `log out/shutdown/authentication/etc`
 * [mpris.js](#mprisjs)
 * [notificationDaemon.js](#notificationdaemonjs): Listens for notifications via DBus and adds them to the message tray
 * [osdMonitorLabeler.js](#osdmonitorlabelerjs)
@@ -70,9 +70,9 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 * [search.js](#searchjs): Abstract class that handle searching and providing results
 * [separator.js](#separatorjs)
 * [sessionMode.js](#sessionmodejs)
-* [shellDBus.js](#shelldbusjs): GNOME Shell DBus implementation (interface name `org.gnome.shell`, path `/org/gnome/Shell`js) for installing/enabling/disabling/uninstalling extensions and requesting information from them, taking screenshots, and so on
-* [shellEntry.js](#shellentryjs): Adds context menus to entry widgets with 'copy' and 'paste' and if it is a password widget 'show'/'hide text'
-* [shellMountOperation.js](#shellmountoperationjs): Wrappers around Shell.MountOperation that handle the ejecting of a device from the [autorunManager.AutorunNotification](#autorunmanagerjs). Provides a dialog letting you know if the device is busy/what processes are inhibiting unmounting and notifications if passwords are needed for the volume.
+* [shellDBus.js](#shelldbusjs): GNOME Shell DBus implementation (interface name `org.gnome.shell`, path `/org/gnome/Shell`js) for `installing/enabling/disabling/uninstalling` extensions and requesting information from them, taking screenshots, and so on
+* [shellEntry.js](#shellentryjs): Adds context menus to entry widgets with 'copy' and 'paste' and if it is a password widget `show/hide text`
+* [shellMountOperation.js](#shellmountoperationjs): Wrappers around `Shell.MountOperation` that handle the ejecting of a device from the [autorunManager.AutorunNotification](#autorunmanagerjs). Provides a dialog letting you know if the device is busy/what processes are inhibiting unmounting and notifications if passwords are needed for the volume.
 * [slider.js](#sliderjs)
 * [switcherPopup.js](#switcherpopupjs)
 * [tweener.js](#tweenerjs): A module that wraps around `imports.tweener.tweener` adding extra goodness for GNOME Shell
@@ -92,7 +92,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
     * [autorunManager.js](#autorunmanagerjs): Manage the autorun function, like when you insert some device in the computer and a dialog asking what to do shown. 
     * [__init__.js](#initjs)
     * [keyring.js](#keyringjs)
-    * [networkAgent.js](#networkagentjs): Manage network interface wifi/wire/bluetooth
+    * [networkAgent.js](#networkagentjs): Manage network interface `wifi/wire/bluetooth`
     * [polkitAgent.js](#polkitagentjs): Handles popping up a password dialog on receiving authentication requests
     * [telepathyClient.js](#telepathyclientjs): Handles chat through telepathy and setting up notifications etc for these
 * [status](#statusjs) directory: This containst the files for all the standard status indicators in the status area
@@ -101,12 +101,12 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
     * [brightness.js](#brightnessjs): The brightness indicator
     * [keyboard.js](#keyboardjs): Keyboard layout indicator
     * [location.js](#locationjs)
-    * [network.js](#networkjs): The network wifi/wired indicator
-    * [power.js](#powerjs): The power battery life/power settings indicator
+    * [network.js](#networkjs): The network `wifi/wired` indicator
+    * [power.js](#powerjs): The power `battery life/power settings` indicator
     * [rfkill.js](#rfkilljs)
     * [screencast.js](#screencastjs)
     * [system.js](#systemjs)
-    * [volume.js](#volumejs): The volumen/sound settings indicator
+    * [volume.js](#volumejs): The `volumen/sound` settings indicator
 
 #Files `imports.misc`
 * [extensionUtils.js](#extensionutilsjs): Set of utilities to do with extensions
@@ -138,9 +138,9 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - GroupCyclerPopup: 
 - WindowSwitcherPopup: 
 - WindowCyclerPopup: 
-- AppIcon: 
-- AppSwitcher: 
-- ThumbnailList: 
+- AppIcon: Class defining the icon for an app
+- AppSwitcher: This handles the display of icons for each app in the `AltTab` popup. Generates an `AppIcon` per app
+- ThumbnailList: This is what appears when you hover over an app with multiple windows in the `AltTab` popup. It handles the list of thumbnails for a given app
 - WindowIcon: 
 - WindowList: 
 
@@ -157,15 +157,15 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - FrequentView: 
 - ViewStackLayout: 
 - AppDisplay: 
-- AppSearchProvider: 
+- AppSearchProvider: Handles finding apps matching search item(s)
 - FolderView: 
 - FolderIcon: 
 - AppFolderPopup: 
-- AppIcon: 
-- AppIconMenu:
+- AppIcon: An icon for an app
+- AppIconMenu: The `right-click` menu of an App containing the relevant actions `New Window/Remove from favourites/Add to favourites/etc`
 
 ## appFavorites.js
-- AppFavorites: Handles your list of app favourites - updates the list when you choose `Add to Favourite`, provides API for you to add/remove from your favourites
+- AppFavorites: Handles your list of app favourites - updates the list when you choose `Add to Favourite`, provides API for you to `add/remove` from your favourites
 
 ## audioDeviceSelection.js
 - AudioDeviceSelectionDialog: 
@@ -190,51 +190,65 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 
 ## calendar.js
 ![Calendar.js](/media/calendar.png)
-- CalendarEvent: 
-- EmptyEventSource: 
-- DBusEventSource: 
-- Calendar: 
+- Contains several functions for manipulating date formats, day abbreviations, etc
+- CalendarEvent: An event in the calendar
+- EmptyEventSource: `Interface for appointments/events`
+- DBusEventSource: A calendar event on the DBus
+- Calendar: Main Calendar class, handles the UI part of the calendar `month navigation/date/graphical calendar` as well as monitoring events
 - EventMessage: 
 - NotificationMessage: 
 - EventsSection: 
 - NotificationSection: 
 - Placeholder: 
-- CalendarMessageList: 
+- CalendarMessageList: Notification section 
+See also [dateMenu.js](#datemenujs) which ties all these elements together
 
 ## checkBox.js
-- CheckBox: 
+![checkBox.js](/media/checkbox.png)
+- CheckBox: Checkbox itself
 
 ## ctrlAltTab.js
 ![ctrlAltTab.js](/media/ctrlalttab.png)
-- CtrlAltTabManager: 
-- CtrlAltTabPopup: 
-- CtrlAltTabSwitcher: 
+- CtrlAltTabManager: Handles `CTRL + ALT + Tab` behaviour - showing the popup, setting up the stage to be ready for keyboard navigation
+- CtrlAltTabPopup: The UI popup itself
+- CtrlAltTabSwitcher: UI element holding all the options you `ALT + Tab` between
 
 ## dash.js
 ![dash.js](/media/dash.png)
-- DashItemContainer: 
+- DashItemContainer: Helper class - each item in the dash is one of these
 - ShowAppsIcon: 
 - DragPlaceholderItem: 
 - EmptyDropTargetItem: 
 - DashActor: 
-- Dash: 
+- Dash: The master `Dash` class, making use of all the other classes
 
 ## dateMenu.js
+![dash.js](/media/dash.png)
+> The date menu. Red: DateMenuButton, Green: TodayButton, Yellow: WorldClockSection
+
 - TodayButton: 
 - WorldClocksSection: 
 - MessagesIndicator: 
 - IndicatorPad: 
 - FreezableBinLayout: 
-- DateMenuButton: 
+- DateMenuButton: Subclass of [PanelMenu.Button](#panelmenujs) to provide the date menu in the middle top panel.
+See also [calendar.js](#calendarjs)
 
 ## dnd.js
-- _Draggable: 
+This allow you to add `drag-and-drop` functionality to your own classes. You use the following functions defined in the file:
+
+- addDragMonitor: You define an object defining the drag behaviour you want, and use `addDragMonitor` to add it. A drag monitor is an object with the key `dragMonitor` whick is a callback for what happens when a drag monitor event occurs `See [dash.js](#dashjs) and [workspacesView.js](workspacesviewjs) for examples`
+- removeDragMonitor: Remove the drag behaviour that you added with `addDragMonitor`
+- makeDraggable: This is what makes an item draggable. You call it on an actor and get a draggable actor back out. You have to define some functions in `actor._delegate`'s class in order for this to work: `handleDragOver`, `acceptDrop`, `getDragActor`, `getDragActorSource`
+ 
+- _Draggable: Class defining a basic draggable item, defining how the dragging happens. You do not use this directly, Instead, use `makeDraggable` to make an actor draggable
 
 ## edgeDragAction.js
 - EdgeDragAction: 
 
 ## endSessionDialog.js
-- EndSessionDialog: 
+![endSessionDialog.js](/media/endsessiondialog-1.png) ![endSessionDialog.js](/media/endsessiondialog-2.png)
+- EndSessionDialog: The end session dialog. Handles the UI part. In terms of actually `logging out/shutting down/etc` the dialog simply sends a message to the GNOME `SessionManager` DBus to request a shutdown rather thant doing the shutdown itself
 
 ## environment.js
 
@@ -634,7 +648,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - VolumeMenu: 
 - Indicator: 
 
-###### ##################################3
+###### ###############################################################################
 
 ## extensionUtils.js
 - ExtensionFinder: 
