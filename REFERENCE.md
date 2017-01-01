@@ -145,13 +145,42 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - WindowList: 
 
 ## animation.js
+- Animation: 
+- AnimatedIcon: 
+
 ## appDisplay.js
+- BaseAppView: 
+- PageIndicatorsActor: 
+- PageIndicators: 
+- AllView: 
+- FrequentView: 
+- ViewStackLayout: 
+- AppDisplay: 
+- AppSearchProvider: 
+- FolderView: 
+- FolderIcon: 
+- AppFolderPopup: 
+- AppIcon: 
+- AppIconMenu:
+
 ## appFavorites.js
 - AppFavorites: Handles your list of app favourites - updates the list when you choose `Add to Favourite`, provides API for you to add/remove from your favourites
 
 ## audioDeviceSelection.js
+- AudioDeviceSelectionDialog: 
+- AudioDeviceSelectionDBus: 
+
 ## background.js
+- BackgroundCache: 
+- Background: 
+- SystemBackground: 
+- BackgroundSource: 
+- Animation: 
+- BackgroundManager: 
+
 ## backgroundMenu.js
+- BackgroundMenu: 
+
 ## boxpointer.js
 ![BoxPointer.js](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/boxpointer.png)
 > BoxPointer is the triangle bit
@@ -159,69 +188,351 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - BoxPointer: The triangle arrow connecting a [popupMenu](#popupmenujs) to its source (you can configure what side of the menu the pointer appears).
 
 ## calendar.js
+- CalendarEvent: 
+- EmptyEventSource: 
+- DBusEventSource: 
+- Calendar: 
+- EventMessage: 
+- NotificationMessage: 
+- EventsSection: 
+- NotificationSection: 
+- Placeholder: 
+- CalendarMessageList: 
+
 ## checkBox.js
+- CheckBox: 
+
 ## ctrlAltTab.js
+- CtrlAltTabManager: 
+- CtrlAltTabPopup: 
+- CtrlAltTabSwitcher: 
+
 ## dash.js
+- DashItemContainer: 
+- ShowAppsIcon: 
+- DragPlaceholderItem: 
+- EmptyDropTargetItem: 
+- DashActor: 
+- Dash: 
+
 ## dateMenu.js
+- TodayButton: 
+- WorldClocksSection: 
+- MessagesIndicator: 
+- IndicatorPad: 
+- FreezableBinLayout: 
+- DateMenuButton: 
+
 ## dnd.js
+- _Draggable: 
+
 ## edgeDragAction.js
+- EdgeDragAction: 
+
 ## endSessionDialog.js
+- EndSessionDialog: 
+
 ## environment.js
+
 ## extensionDownloader.js
+- InstallExtensionDialog: 
+
 ## extensionSystem.js
+
 ## focusCaretTracker.js
+- FocusCaretTracker: 
+
 ## grabHelper.js
+- GrabHelper: 
+
 ## ibusCandidatePopup.js
+- CandidateArea: 
+- CandidatePopup: 
+
 ## iconGrid.js
+- BaseIcon: 
+- IconGrid: 
+- PaginatedIconGrid: 
+
 ## keyboard.js
+- Key: 
+- Keyboard: 
+- KeyboardSource: 
+- ShellWaylandAdapter: 
+
 ## layout.js
+- MonitorConstraint: 
+- Monitor: 
+- LayoutManager: 
+- HotCorner: 
+- PressureBarrier: 
+
 ## legacyTray.js
+- LegacyTray: 
+
 ## lightbox.js
+- RadialShaderQuad: 
+- Lightbox: 
+
 ## lookingGlass.js
+- AutoComplete: 
+- Notebook: 
+- ObjLink: 
+- Result: 
+- WindowList: 
+- ObjInspector: 
+- RedBorderEffect: 
+- Inspector: 
+- Extensions: 
+- LookingGlass: 
+
 ## magnifierDBus.js
+- ShellMagnifier: 
+- ShellMagnifierZoomRegion: 
+
 ## magnifier.js
+- Magnifier: 
+- ZoomRegion: 
+- Crosshairs: 
+- MagShaderEffects: 
+
 ## main.js
+- RestartMessage: 
+
 ## messageList.js
+- URLHighlighter: 
+- ScaleLayout: 
+- LabelExpanderLayout: 
+- Message: 
+- MessageListSection: 
+
 ## messageTray.js
+- FocusGrabber: 
+- NotificationPolicy: 
+- NotificationGenericPolicy: 
+- NotificationApplicationPolicy: 
+- Notification: 
+- NotificationBanner: 
+- SourceActor: 
+- SourceActorWithLabel: 
+- Source: 
+- MessageTray: 
+- SystemNotificationSource: 
+
 ## modalDialog.js
+- ModalDialog: 
+
 ## mpris.js
+- MediaMessage: 
+- MprisPlayer: 
+- MediaSection: 
+
 ## notificationDaemon.js
+- FdoNotificationDaemon: 
+- FdoNotificationDaemonSource: 
+- GtkNotificationDaemonNotification: 
+- GtkNotificationDaemonAppSource: 
+- GtkNotificationDaemon: 
+- NotificationDaemon: 
+
 ## osdMonitorLabeler.js
+- OsdMonitorLabel: 
+- OsdMonitorLabeler: 
+
 ## osdWindow.js
+- LevelBar: 
+- OsdWindowConstraint: 
+- OsdWindow: 
+- OsdWindowManager: 
+
 ## overviewControls.js
+- SlideLayout: 
+- SlidingControl: 
+- ThumbnailsSlider: 
+- DashSlider: 
+- DashSpacer: 
+- ControlsLayout: 
+- ControlsManager: 
+
 ## overview.js
+- ShellInfo: 
+- Overview: 
+
 ## padOsd.js
+- KeybindingEntry: 
+- ActionComboBox: 
+- ActionEditor: 
+- PadDiagram: 
+- PadOsd: 
+- PadOsdService: 
+
 ## panel.js
+- AppMenuButton: 
+- ActivitiesButton: 
+- PanelCorner: 
+- AggregateLayout: 
+- AggregateMenu: 
+- Panel: 
+
 ## panelMenu.js
+- ButtonBox: 
+- Button: 
+- SystemIndicator: 
+
 ## pointerWatcher.js
+- PointerWatch: 
+- PointerWatcher: 
+
 ## popupMenu.js
+- PopupBaseMenuItem: 
+- PopupMenuItem: 
+- PopupSeparatorMenuItem: 
+- Switch: 
+- PopupSwitchMenuItem: 
+- PopupImageMenuItem: 
+- PopupMenuBase: 
+- PopupMenu: 
+- PopupDummyMenu: 
+- PopupSubMenu: 
+- PopupMenuSection: 
+- PopupSubMenuMenuItem: 
+- PopupMenuManager: 
+
 ## remoteMenu.js
+- RemoteMenuSeparatorItemMapper: 
+- RequestSubMenu: 
+- RemoteMenuSubmenuItemMapper: 
+- RemoteMenuItemMapper: 
+- RemoteMenu: 
+
 ## remoteSearch.js
+- RemoteSearchProvider: 
+- RemoteSearchProvider2: 
+
 ## runDialog.js
+- RunDialog: 
+
 ## screencast.js
+- ScreencastService: 
+
 ## screenShield.js
+- Clock: 
+- NotificationsBox: 
+- Arrow: 
+- ScreenShield: 
+
 ## screenshot.js
+- ScreenshotService: 
+- SelectArea: 
+- Flashspot: 
+
 ## scripting.js
+
 ## search.js
+- MaxWidthBin: 
+- SearchResult: 
+- ListSearchResult: 
+- GridSearchResult: 
+- SearchResultsBase: 
+- ListSearchResults: 
+- GridSearchResults: 
+- SearchResults: 
+- ProviderIcon: 
+
 ## separator.js
+- HorizontalSeparator: 
+
 ## sessionMode.js
+- SessionMode: 
+
 ## shellDBus.js
+- GnomeShell: 
+- GnomeShellExtensions: 
+- ScreenSaverDBus: 
+
 ## shellEntry.js
+- EntryMenu: 
+
 ## shellMountOperation.js
+- ListItem: 
+- ShellMountOperation: 
+- ShellUnmountNotifier: 
+- ShellMountQuestionDialog: 
+- ShellMountPasswordDialog: 
+- ShellProcessesDialog: 
+- GnomeShellMountOpHandler: 
+
 ## slider.js
+- Slider: 
+
 ## switcherPopup.js
+- SwitcherPopup: 
+- SwitcherList: 
+
 ## tweener.js
+- ClutterFrameTicker: 
+
 ## unlockDialog.js
+- UnlockDialog: 
+
 ## userWidget.js
+- Avatar: 
+- UserWidgetLabel: 
+- UserWidget: 
+
 ## viewSelector.js
+- FocusTrap: 
+- TouchpadShowOverviewAction: 
+- ShowOverviewAction: 
+- ViewSelector: 
+
 ## windowAttentionHandler.js
+- WindowAttentionHandler: 
+- Source: 
+
 ## windowManager.js
+- DisplayChangeDialog: 
+- WindowDimmer: 
+- WorkspaceTracker: 
+- TilePreview: 
+- TouchpadWorkspaceSwitchAction: 
+- WorkspaceSwitchAction: 
+- AppSwitchAction: 
+- ResizePopup: 
+- WindowManager: 
+
 ## windowMenu.js
+- WindowMenu: 
+- AppMenu: 
+- WindowMenuManager: 
+
 ## workspace.js
+- WindowCloneLayout: 
+- WindowClone: 
+- WindowOverlay: 
+- LayoutStrategy: 
+- UnalignedLayoutStrategy: 
+- Workspace: 
+
 ## workspacesView.js
+- WorkspacesViewBase: 
+- WorkspacesView: 
+- ExtraWorkspaceView: 
+- DelegateFocusNavigator: 
+- WorkspacesDisplay: 
+
 ## workspaceSwitcherPopup.js
+- WorkspaceSwitcherPopup: 
+
 ## workspaceThumbnail.js
+- PrimaryActorLayout: 
+- WindowClone: 
+- WorkspaceThumbnail: 
+- ThumbnailsBox: 
+
 ## xdndHandler.js
+- XdndHandler: 
+
 
 <br>
 <br>
