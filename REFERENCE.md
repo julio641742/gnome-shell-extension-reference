@@ -533,9 +533,103 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 ## xdndHandler.js
 - XdndHandler: 
 
+## automountManager.js
+- AutomountManager: 
 
-<br>
-<br>
+## autorunManager.js
+- ContentTypeDiscoverer: 
+- AutorunManager: 
+- AutorunDispatcher: 
+- AutorunSource: 
+- AutorunNotification: 
+
+## __init__.js
+- ComponentManager: 
+
+## keyring.js
+- KeyringDialog: 
+- KeyringDummyDialog: 
+- KeyringPrompter: 
+
+## networkAgent.js
+- NetworkSecretDialog: 
+- VPNRequestHandler: 
+- NetworkAgent: 
+
+## polkitAgent.js
+- AuthenticationDialog: 
+- AuthenticationAgent: 
+
+## telepathyClient.js
+- TelepathyClient: 
+- ChatSource: 
+- ChatNotification: 
+- ChatLineBox: 
+- ChatNotificationBanner: 
+
+## accessibility.js
+- ATIndicator: 
+- ATGreeterIndicator: 
+
+## bluetooth.js
+- Indicator: 
+
+## brightness.js
+- Indicator: 
+
+## keyboard.js
+- LayoutMenuItem: 
+- InputSource: 
+- InputSourcePopup: 
+- InputSourceSwitcher: 
+- InputSourceSettings: 
+- InputSourceSystemSettings: 
+- InputSourceSessionSettings: 
+- InputSourceManager: 
+- InputSourceIndicator: 
+
+## location.js
+- Indicator: 
+- AppAuthorizer: 
+- GeolocationDialog: 
+
+## network.js
+- NMConnectionItem: 
+- NMConnectionSection: 
+- NMConnectionDevice: 
+- NMDeviceWired: 
+- NMDeviceModem: 
+- NMDeviceBluetooth: 
+- NMWirelessDialogItem: 
+- NMWirelessDialog: 
+- NMDeviceWireless: 
+- NMVPNConnectionItem: 
+- NMVPNSection: 
+- DeviceCategory: 
+- NMApplet: 
+
+## power.js
+- Indicator: 
+
+## rfkill.js
+- RfkillManager: 
+- Indicator: 
+
+## screencast.js
+- Indicator: 
+
+## system.js
+- AltSwitcher: 
+- Indicator: 
+
+## volume.js
+- StreamSlider: 
+- OutputStreamSlider: 
+- InputStreamSlider: 
+- VolumeMenu: 
+- Indicator: 
+
+###### ##################################3
 
 ## extensionUtils.js
 - ExtensionFinder: 
