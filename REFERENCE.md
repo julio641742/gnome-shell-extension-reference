@@ -538,15 +538,39 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 <br>
 
 ## extensionUtils.js
+- ExtensionFinder: 
+
 ## fileUtils.js
+
 ## gnomeSession.js
+
 ## history.js
+- HistoryManager: 
+
 ## ibusManager.js
+- IBusManager: 
+
 ## jsParse.js
+
 ## keyboardManager.js
+- KeyboardManager: 
+
 ## loginManager.js
+- LoginManagerSystemd: 
+- LoginManagerDummy: 
+
 ## modemManager.js
+- ModemGsm: 
+- ModemCdma: 
+- BroadbandModem: 
+
 ## objectManager.js
+- ObjectManager: 
+
 ## params.js
+
 ## smartcardManager.js
+- SmartcardManager: 
+
 ## util.js
+- CloseButton: 
