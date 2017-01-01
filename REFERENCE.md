@@ -149,7 +149,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - AnimatedIcon: 
 
 ## appDisplay.js
-![appDisplay.js](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/gnome-shell-overlay-mode-applications.png)
+![appDisplay.js](./media/gnome-shell-overlay-mode-applications.png)
 - BaseAppView: 
 - PageIndicatorsActor: 
 - PageIndicators: 
@@ -183,7 +183,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - BackgroundMenu: 
 
 ## boxpointer.js
-![BoxPointer.js](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/boxpointer.png)
+![BoxPointer.js](./media/boxpointer.png)
 > BoxPointer is the triangle bit
 
 - BoxPointer: The triangle arrow connecting a [popupMenu](#popupmenujs) to its source (you can configure what side of the menu the pointer appears).
