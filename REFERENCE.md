@@ -1,6 +1,6 @@
-#JS UI REFERENCE
+#GNOME Shell Javascript Source Reference
 <br>
-This is a summary of the UI Files. 
+Documentation for the Javascript files that make up GNOME Shell's Javascript side
 
 #####Notes
 - The actual version of GNOME Shell as of today is 3.22
@@ -127,13 +127,92 @@ This is a summary of the UI Files.
 #Overview of classes in each file
 
 ## accessDialog.js
-test1
-
 ## altTab.js
-test2
-
 ## animation.js
-test3
-
 ## appDisplay.js
-test4
+## appFavorites.js
+## audioDeviceSelection.js
+## background.js
+## backgroundMenu.js
+## boxpointer.js
+## calendar.js
+## checkBox.js
+## ctrlAltTab.js
+## dash.js
+## dateMenu.js
+## dnd.js
+## edgeDragAction.js
+## endSessionDialog.js
+## environment.js
+## extensionDownloader.js
+## extensionSystem.js
+## focusCaretTracker.js
+## grabHelper.js
+## ibusCandidatePopup.js
+## iconGrid.js
+## keyboard.js
+## layout.js
+## legacyTray.js
+## lightbox.js
+## lookingGlass.js
+## magnifierDBus.js
+## magnifier.js
+## main.js
+## messageList.js
+## messageTray.js
+## modalDialog.js
+## mpris.js
+## notificationDaemon.js
+## osdMonitorLabeler.js
+## osdWindow.js
+## overviewControls.js
+## overview.js
+## padOsd.js
+## panel.js
+## panelMenu.js
+## pointerWatcher.js
+## popupMenu.js
+## remoteMenu.js
+## remoteSearch.js
+## runDialog.js
+## screencast.js
+## screenShield.js
+## screenshot.js
+## scripting.js
+## search.js
+## separator.js
+## sessionMode.js
+## shellDBus.js
+## shellEntry.js
+## shellMountOperation.js
+## slider.js
+## switcherPopup.js
+## tweener.js
+## unlockDialog.js
+## userWidget.js
+## viewSelector.js
+## windowAttentionHandler.js
+## windowManager.js
+## windowMenu.js
+## workspace.js
+## workspacesView.js
+## workspaceSwitcherPopup.js
+## workspaceThumbnail.js
+## xdndHandler.js
+
+<br>
+<br>
+
+## extensionUtils.js
+## fileUtils.js
+## gnomeSession.js
+## history.js
+## ibusManager.js
+## jsParse.js
+## keyboardManager.js
+## loginManager.js
+## modemManager.js
+## objectManager.js
+## params.js
+## smartcardManager.js
+## util.js
