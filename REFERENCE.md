@@ -129,11 +129,13 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 ## accessDialog.js
 - AccessDialog:
 - AccessDialogDBus:
+
 ## altTab.js
 ## animation.js
 ## appDisplay.js
 ## appFavorites.js
 - AppFavorites: Handles your list of app favourites - updates the list when you choose `Add to Favourite`, provides API for you to add/remove from your favourites
+
 ## audioDeviceSelection.js
 ## background.js
 ## backgroundMenu.js
