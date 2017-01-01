@@ -142,6 +142,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 ## boxpointer.js
 ![BoxPointer.js](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/boxpointer.png)
 > BoxPointer is the triangle bit
+
 - BoxPointer: The triangle arrow connecting a popupmenu to its source (you can configure what side of the menu the pointer appears).
 
 ## calendar.js
