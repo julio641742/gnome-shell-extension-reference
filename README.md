@@ -1,11 +1,15 @@
 <h1 align="center">
     <br>
-    <img width="400" src="https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/gnome-logo.png" alt="Gnome Shell Extension Reference">
+    ![Gnome Shell Extension Reference](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/gnome-logo.png)
     <br>
     <br>
     <br>
 </h1>
 #GNOME Shell Extension Reference
+![GNOME Shell](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/gnome-shell-overview.png)
+![GNOME Shell](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/gnome-shell-overlay-mode-applications.png)
+![GNOME Shell](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/gnome-shell-overlay-mode-windows.png)
+
 
 This is an unofficial reference guide for GNOME Shell extensions
 
@@ -16,16 +20,13 @@ You will need to know Javascript, CSS and XML in order to create a beautiful GNO
 - [GNOME Shell UI Files](https://github.com/GNOME/gnome-shell/tree/master/js/ui)
 - [GNOME Shell Miscellaneous Files](https://github.com/GNOME/gnome-shell/tree/master/js/misc)
 - [GNOME Shell CSS Code](https://github.com/GNOME/gnome-shell/blob/master/data/theme/gnome-shell.css)
-- [Eloquent Javascript Ch 1-6](http://eloquentjavascript.net/)
-- [XML](http://www.w3schools.com/xml/xml_whatis.asp)
-- [CSS](http://www.w3schools.com/css/css_syntax.asp)
+- [Learn Javascript](https://developer.mozilla.org/en-US/learn/javascript)
 
 ####Progress
 - [ ] Step by step tutorial
 - [ ] Complete Reference
 
 Any contribution to this guide is welcomed
-
 
 ##Items
 
