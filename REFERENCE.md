@@ -703,15 +703,16 @@ These files define the standar status indicators in the status are
 
 ## accessibility.js
 ![accessibility.js](/media/accessibility.png)
-- ATIndicator: The [panelMenu.Button](#panelmenu) defining the accessibility indicator. This provides a number of [popupMenu.PopupSwitchMenuItem](#popupmenujs)s allowing you to toggle on and off various accessibility features
+- ATIndicator: The [panelMenu.Button](#panelmenujs) defining the accessibility indicator. This provides a number of [popupMenu.PopupSwitchMenuItem](#popupmenujs)s allowing you to toggle on and off various accessibility features
 - ATGreeterIndicator: 
 
 ## bluetooth.js
 ![bluetooth.js](/media/bluetooth.png)
-- Indicator: The [panelMenu.SystemIndicator] defining the bluetooth indicator.
+- Indicator: The [panelMenu.SystemIndicator](#panelmenujs) defining the bluetooth indicator.
 
 ## brightness.js
-- Indicator: 
+![brightness.js](/media/brightness.png)
+- Indicator: The [panelMenu.SystemIndicator](#panelmenujs) defining the brightness indicator.
 
 ## keyboard.js
 - LayoutMenuItem: 
