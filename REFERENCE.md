@@ -446,9 +446,9 @@ See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDis
 - AggregateLayout: 
 - AggregateMenu: It is the `Status Area` button, it holds the `network/location/power/brightness/volume/system/etc` indicators
 - Panel: The `Top Panel`, stored in `Main.panel`. It is split into three `boxes` into which various panel elements are all placed:
-    - _leftBox: `Main.panel._leftBox`. Contains the `ActivitiesButton` and the `AppMenuButton`
-    - _centerBox: `Main.panel._centerBox`. Contains the [dateMenu.DateMenuButton](#datemenujs) button
-    - _rightBox: `Main.panel._rightBox`. Contains the `AggregateMenu`/`Status Area`. However when you want to insert icons into the `Status Area` you should use `Main.panel.addToStatusArea(role, myButton, position)` where `role` is the role that button performs (`network`, `a11y`, ...). There can only be one button performing each role in the `Status Area`
+    - _leftBox, `Main.panel._leftBox`: Contains the `ActivitiesButton` and the `AppMenuButton`
+    - _centerBox, `Main.panel._centerBox`: Contains the [dateMenu.DateMenuButton](#datemenujs) button
+    - _rightBox, `Main.panel._rightBox`: Contains the `AggregateMenu`/`Status Area`. However when you want to insert icons into the `Status Area` you should use `Main.panel.addToStatusArea(role, myButton, position)` where `role` is the role that button performs (`network`, `a11y`, ...). There can only be one button performing each role in the `Status Area`
 
 
 ## panelMenu.js
@@ -486,11 +486,16 @@ See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDis
 - RemoteMenu: 
 
 ## remoteSearch.js
-- RemoteSearchProvider: 
+- RemoteSearchProvider: A search provider that acts through DBus
 - RemoteSearchProvider2: 
 
 ## runDialog.js
-- RunDialog: 
+![runDialog.js](/media/rundialog.png)
+- RunDialog: The run dialog that you get on `ALT + F2`. Type commands in here to have them executed. Also defines a couple of `special` commands:
+    - lg: opens the [Looking Glass](#lookingglassjs)
+    - r, restart: Restarts GNOME Shel. Needed if you make changes to JS files [WARNING: Wayland doesn't support this command, you need to change to Xorg Display Server when you log into your account]
+    - rt: Reloads the shell theme
+    - debugexit: Quits the shell with debug info
 
 ## screencast.js
 - ScreencastService: 
