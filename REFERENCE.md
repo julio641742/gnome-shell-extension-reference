@@ -493,7 +493,7 @@ See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDis
 ![runDialog.js](/media/rundialog.png)
 - RunDialog: The run dialog that you get on `ALT + F2`. Type commands in here to have them executed. Also defines a couple of `special` commands:
     - lg: opens the [Looking Glass](#lookingglassjs)
-    - r, restart: Restarts GNOME Shel. Needed if you make changes to JS files [WARNING: Wayland doesn't support this command, you need to change to Xorg Display Server when you log into your account]
+    - r, restart: Restarts GNOME Shel. Needed if you make changes to JS files [**WARNING**: Wayland doesn't support this command, you need to change to Xorg Display Server when you log into your account]
     - rt: Reloads the shell theme
     - debugexit: Quits the shell with debug info
 
@@ -512,6 +512,36 @@ See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDis
 - Flashspot: 
 
 ## scripting.js
+**Documentation extracted from the source**
+This module provides functionality for driving the shell user interface in an automated fashion. The primary current use case for this is automated performance testing (see `runPerfScript()`), but it could be applied to other forms of automation, such as testing for correctness as well.
+
+When scripting an automated test we want to make a series of calls in a linear fashion, but we also want to be able to let the main loop run so actions can finish. For this reason we write the script as a generator function that yields when it want to let the main loop run.
+
+```javascript
+yield Scripting.sleep(1000);
+main.overview.show();
+yield Scripting.waitLeisure();
+```
+While it isn't important to the person writing the script, the actual yielded result is a function that the caller uses to provide the callback for resuming the script.
+
+Provides:
+- `sleep(milliseconds)`: Used within an automation script to pause the the execution of the current script for the specified amount of time. Use as:
+```javascript
+    yield Scripting.sleep(500);
+```
+- `waitLeisure()`: Used within an automation script to pause the the execution of the current script until the shell is completely idle. Use as:
+```javascript
+    yield Scripting.waitLeisure();
+```
+- PerfHelper: DBus proxy for `org.gnome.shell.PerfHelper`
+- `createTestWindow(width, height, alpha, maximized)`: Creates a window using `gnome-shell-perf-helper` for testing purposes. While this function can be used with yield in an automation script to pause until the DBus call to the helper process returns, because of the normal X asynchronous mapping process, to actually wait until the window has been mapped and exposed, use `waitTestWindows()`
+- `waitTestWindows()`: Used within an automation script to pause until all windows previously created with `createTestWindow` have been mapped and exposed.
+- `destroyTestWindows()`: Destroys all windows previously created with `createTestWindow()`. While this function can be used with yield in an automation script to pause until the D-Bus call to the helper process returns, this doesn't guarantee that Mutter has actually finished the destroy process because of normal X asynchronicity.
+- `defineScriptEvent(name, description)`: Convenience function to define a zero-argument performance event within the `script` namespace that is reserved for events defined locally within a performance automation script.
+- `scriptEvent(name)`: Convenience function to record a script-local performance event previously defined with `defineScriptEvent`
+- `collectStatistics()`: Convenience function to trigger statistics collection.
+- `runPerfScript(scriptModule)`: module object with run and finish functions and event handlers. Runs a script for automated collection of performance data. The script is defined as a Javascript module with specified contents. See the `scripting.js` file for much more detail (it's documented in there).
+
 
 ## search.js
 - MaxWidthBin: 
