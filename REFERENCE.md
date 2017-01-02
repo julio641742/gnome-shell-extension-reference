@@ -572,7 +572,6 @@ Provides:
 
 ## shellMountOperation.js
 ![shellMountOperation.js](/media/shellmountoperation.png)
-
 - ListItem: A button displaying a particular application's icon and name, that will launch the application when clicked. These are used in the `ShellProcessesDialog`, one per application that impedes the removal of a device
 - ShellMountOperation: 
 - ShellUnmountNotifier: 
@@ -606,19 +605,26 @@ Provides:
 - ViewSelector: 
 
 ## windowAttentionHandler.js
-- WindowAttentionHandler: 
-- Source: 
+![shellMountOperation.js](/media/windowattentionhandler.png)
+- WindowAttentionHandler: Handles `window-demands-attention` signals from `global.display` and pops up the `x is ready` notification upon receiving it. When you start up and app it can take a while to load and in the meantime you move on to another window; when the window does actually load you get a notification letting you know the application is ready to be used
+- Source: A [MessageTray.Source](#messagetrayjs) tailored to window attention requests. If you focus the windows then the notification is no longer relevant so it will remove itself
 
 ## windowManager.js
 - DisplayChangeDialog: 
-- WindowDimmer: 
+- WindowDimmer: When created with an actor (for example a `Meta.WindowActor`), dims that actor. For example when you open a modal dialog from a window, that window is dimmed until you are finished with the modal dialog
 - WorkspaceTracker: 
 - TilePreview: 
 - TouchpadWorkspaceSwitchAction: 
 - WorkspaceSwitchAction: 
 - AppSwitchAction: 
 - ResizePopup: 
-- WindowManager: 
+- WindowManager: Extra bells and whistles on the undarlying window manager. This handles things like:
+    - Showing the workspace switcher popup upon receiving a `switch-to-workspace-*` keybinding
+    - Animating all your windows sliding off the screen when you switch workspaces
+    - Adding animations to windows when they are `Minimized/Maximized/Mapped/Destroyed`
+    - Dimming a parent window if you open a modal dialog for it and undimming when the dialog is dismissed
+    - Showing the window switcher `ALT + Tab` popup, and
+    - Showing the accesibility switcher `CTRL + ALT + Tab` popup
 
 ## windowMenu.js
 - WindowMenu: 
@@ -626,12 +632,13 @@ Provides:
 - WindowMenuManager: 
 
 ## workspace.js
+![workspace.js](/media/gnome-shell-overlay-mode-windows.png)
 - WindowCloneLayout: 
-- WindowClone: 
-- WindowOverlay: 
+- WindowClone: The thumbnail of a window that you see in the windows tab of the `Overview`. You can click to activate it, drag it to move it between workspaces. One per window actor
+- WindowOverlay: This defines items that are overlaid on the `WindowsClone`. In particular, The windows's caption and the close button that you see on each window in the `Overview`
 - LayoutStrategy: 
 - UnalignedLayoutStrategy: 
-- Workspace: 
+- Workspace: Represents a collection of `WindowOverlay`s in the `Overview`. Each one just looks after the overlays in its own workspace and monitor. It handles how to lay out its overlays. This is not the workspace preview you see in the workspaces sidebar, that is a [WorkspaceThumbnail.WorkspaceThumbnail](#workspacethumbnailjs)
 
 ## workspacesView.js
 - WorkspacesViewBase: 
