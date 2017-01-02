@@ -652,7 +652,7 @@ Provides:
 - WorkspaceSwitcherPopup: This is the popup that appears when you switch workspaces via keybindings, showing which workspace you've switched to
 
 ## workspaceThumbnail.js
-![workspace.js](/media/gnome-shell-overlay-mode-windows.png)
+![workspaceThumbnail.js](/media/workspacethumbnail.png)
 - PrimaryActorLayout: 
 - WindowClone: This is a thumbnail of a window (used in a `WorkspaceThumbnail`) - one per window. It can be dragged to another workspace to switch its workspace
 - WorkspaceThumbnail: This is a thumbnail of a workspace, one per workspace. Shows thumbnails of all the windows on that workspace. It is an up-to-date snapshot of its windows (updates when windows are `Added/Removed/Minimized/State Changed`)
