@@ -87,7 +87,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 * [workspaceSwitcherPopup.js](#workspaceswitcherpopupjs): The popup you get upon switching workspaces through the keybindings that shows you which workspaces you are switching to
 * [workspaceThumbnail.js](#workspacethumbnailjs): Defines the classes in the workspace sidebar in overview
 * [xdndHandler.js](#xdndhandlerjs): GNOME Shell handling of Xdnd: dragging and dropping things between X window and a GNOME Shell object. 
-* [components](#componentsjs) directory
+* [components](#components) directory
     * [automountManager.js](#automountmanagerjs): Manages the automount of devices, like when you insert a USB stick and it is mounted automatically.
     * [autorunManager.js](#autorunmanagerjs): Manage the autorun function, like when you insert some device in the computer and a dialog asking what to do shown. 
     * [__init__.js](#initjs)
@@ -95,7 +95,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
     * [networkAgent.js](#networkagentjs): Manage network interface `wifi/wire/bluetooth`
     * [polkitAgent.js](#polkitagentjs): Handles popping up a password dialog on receiving authentication requests
     * [telepathyClient.js](#telepathyclientjs): Handles chat through telepathy and setting up notifications etc for these
-* [status](#statusjs) directory: This contains the files for all the standard status indicators in the `Status Area`
+* [status](#status-indicators) directory: This contains the files for all the standard status indicators in the `Status Area`
     * [accessibility.js](#accessibilityjs): The accessibility `a11y` indicator
     * [bluetooth.js](#bluetoothjs): The bluetooth indicator
     * [brightness.js](#brightnessjs): The brightness indicator
@@ -661,6 +661,9 @@ Provides:
 ## xdndHandler.js
 - XdndHandler: Sets up `Xdnd` and passes through signals. When a `non-gnome-shell object` is first dragged over a `gnome-shell-object`, tha handler fires a `drag-begin` signal. When the object being dragged leaves the `gnome-shell-object`, the `drage-end` signal is fired. The class somehow incorporates with [dnd.js](#dndjs) code too whereby a draggable target/object registered with `dnd.js` has the appropiate events called on it. Use `Main.xdndHandler` to access the instance of the handler and connect to its signals.
 
+
+#Components
+
 ## automountManager.js
 - AutomountManager: 
 
@@ -695,8 +698,12 @@ Provides:
 - ChatLineBox: 
 - ChatNotificationBanner: 
 
+#Status Indicators
+These files define the standar status indicators in the status are
+
 ## accessibility.js
-- ATIndicator: 
+![accessibility.js](/media/accessibility.png)
+- ATIndicator: The [panelMenu.SystemIndicator] defining the accessibility indicator. This provides a number of [popupMenu.PopupSwitchMenuItem](#popupmenujs)s allowing you to toggle on and off various accessibility features
 - ATGreeterIndicator: 
 
 ## bluetooth.js
