@@ -441,8 +441,8 @@ See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDis
 ![panel.js](/media/panel-3.png)
 > AggregateMenu
 
-- AppMenuButton: This is the top titlebar (stored in `Main.panel._appMenu`). Inherits from [PanelMenu.Button](#panelmenujs), so it has a dropdown menu (by default showing `Quit`)
-- ActivitiesButton: The `Activities` button on the Top Left that triggers the overview. It is a [PanelMenu.Button](#panelmenujs) but without a menu. Contains the [Layout.HotCorner](layoutjs) that triggers the overview
+- AppMenuButton: This is the top titlebar (stored in `Main.panel._appMenu`). Inherits from [panelMenu.Button](#panelmenujs), so it has a dropdown menu (by default showing `Quit`)
+- ActivitiesButton: The `Activities` button on the Top Left that triggers the overview. It is a [panelMenu.Button](#panelmenujs) but without a menu. Contains the [layout.HotCorner](layoutjs) that triggers the overview
 - PanelCorner: The black rounded corners that extend down from the `Top Panel` on either side of the screen. They are painted onto the screen using the panel colour
 - AggregateLayout: 
 - AggregateMenu: It is the `Status Area` button, it holds the `network/location/power/brightness/volume/system/etc` indicators
@@ -607,7 +607,7 @@ Provides:
 ## windowAttentionHandler.js
 ![shellMountOperation.js](/media/windowattentionhandler.png)
 - WindowAttentionHandler: Handles `window-demands-attention` signals from `global.display` and pops up the `x is ready` notification upon receiving it. When you start up and app it can take a while to load and in the meantime you move on to another window; when the window does actually load you get a notification letting you know the application is ready to be used
-- Source: A [MessageTray.Source](#messagetrayjs) tailored to window attention requests. If you focus the windows then the notification is no longer relevant so it will remove itself
+- Source: A [messageTray.Source](#messagetrayjs) tailored to window attention requests. If you focus the windows then the notification is no longer relevant so it will remove itself
 
 ## windowManager.js
 - DisplayChangeDialog: 
@@ -638,26 +638,28 @@ Provides:
 - WindowOverlay: This defines items that are overlaid on the `WindowsClone`. In particular, The windows's caption and the close button that you see on each window in the `Overview`
 - LayoutStrategy: 
 - UnalignedLayoutStrategy: 
-- Workspace: Represents a collection of `WindowOverlay`s in the `Overview`. Each one just looks after the overlays in its own workspace and monitor. It handles how to lay out its overlays. This is not the workspace preview you see in the workspaces sidebar, that is a [WorkspaceThumbnail.WorkspaceThumbnail](#workspacethumbnailjs)
+- Workspace: Represents a collection of `WindowOverlay`s in the `Overview`. Each one just looks after the overlays in its own workspace and monitor. It handles how to lay out its overlays. This is not the workspace preview you see in the workspaces sidebar, that is a [workspaceThumbnail.WorkspaceThumbnail](#workspacethumbnailjs)
 
 ## workspacesView.js
 - WorkspacesViewBase: 
-- WorkspacesView: 
+- WorkspacesView: A container for many [workspace.Workspace](#workspacejs)s
 - ExtraWorkspaceView: 
 - DelegateFocusNavigator: 
-- WorkspacesDisplay: 
+- WorkspacesDisplay: This is essentially the `Windows` tab in the `Overview`. On the right hand side it has a sidebar showing workspace thumbnails that you can choose; this is a [workspaceThumbnail.ThumbnailsBox](#workspacethumbnailjs). The part that shows all the window thumbnails is a `WorkspacesView`. This class handles things like when the workspaces preview sidebar (ThumbnailsBox) should be slidden out and in. showing/animating the rectangle about the current workspace in the sidebar animating when dynamic workspaces are added/removed, changing workspaces on scrollin ove the sidebar, etc
 
 ## workspaceSwitcherPopup.js
-- WorkspaceSwitcherPopup: 
+![workspaceSwitcherPopup.js](/media/workspaceswitcherpopup.png)
+- WorkspaceSwitcherPopup: This is the popup that appears when you switch workspaces via keybindings, showing which workspace you've switched to
 
 ## workspaceThumbnail.js
+![workspace.js](/media/gnome-shell-overlay-mode-windows.png)
 - PrimaryActorLayout: 
-- WindowClone: 
-- WorkspaceThumbnail: 
-- ThumbnailsBox: 
+- WindowClone: This is a thumbnail of a window (used in a `WorkspaceThumbnail`) - one per window. It can be dragged to another workspace to switch its workspace
+- WorkspaceThumbnail: This is a thumbnail of a workspace, one per workspace. Shows thumbnails of all the windows on that workspace. It is an up-to-date snapshot of its windows (updates when windows are `Added/Removed/Minimized/State Changed`)
+- ThumbnailsBox: This is a collection of workspace thumbnails (the workspaces sidebar you see in the `Overview`). Handles the sliding in or out of workspaces as they are `Added/Destroyed`, and also dragging windows to create new workspaces between existing ones
 
 ## xdndHandler.js
-- XdndHandler: 
+- XdndHandler: Sets up `Xdnd` and passes through signals. When a `non-gnome-shell object` is first dragged over a `gnome-shell-object`, tha handler fires a `drag-begin` signal. When the object being dragged leaves the `gnome-shell-object`, the `drage-end` signal is fired. The class somehow incorporates with [dnd.js](#dndjs) code too whereby a draggable target/object registered with `dnd.js` has the appropiate events called on it. Use `Main.xdndHandler` to access the instance of the handler and connect to its signals.
 
 ## automountManager.js
 - AutomountManager: 
