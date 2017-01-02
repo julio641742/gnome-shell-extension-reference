@@ -240,7 +240,7 @@ See also [calendar.js](#calendarjs)
 This allow you to add `drag-and-drop` functionality to your own classes. You use the following functions defined in the file:
 
 - addDragMonitor: You define an object defining the drag behaviour you want, and use `addDragMonitor` to add it. A drag monitor is an object with the key `dragMonitor` whick is a callback for what happens when a drag monitor event occurs 
-See [dash.js](#dashjs) and [workspacesView.js](workspacesviewjs) for examples
+See [dash.js](#dashjs) and [workspacesView.js](#workspacesviewjs) for examples
 - removeDragMonitor: Remove the drag behaviour that you added with `addDragMonitor`
 - makeDraggable: This is what makes an item draggable. You call it on an actor and get a draggable actor back out. You have to define some functions in `actor._delegate`'s class in order for this to work: `handleDragOver`, `acceptDrop`, `getDragActor`, `getDragActorSource`
  
