@@ -570,12 +570,14 @@ Provides:
 - EntryMenu: A subclass of [popupMenu.PopupMenu](#popupmenujs) used to provide a context menu to a `Clutter.Entry` or `St.Entry` (text box). Do not use this class directly; instead use `ShellEntry.addContextMenu(entry)`. The context menu acts like so: when the user `right-click` the entry, they get a popup menu with `Paste/Copy` and if it is a password dialog it will have a `Show/Hide character` item too
 
 ## shellMountOperation.js
-- ListItem: 
+![shellMountOperation.js](/media/shellmountoperation.png)
+
+- ListItem: A button displaying a particular application's icon and name, that will launch the application when clicked. These are used in the `ShellProcessesDialog`, one per application that impedes the removal of a device
 - ShellMountOperation: 
 - ShellUnmountNotifier: 
-- ShellMountQuestionDialog: 
+- ShellMountQuestionDialog: Extends [modalDialog.ModalDialog](#modaldialogjs) to provide a dialog that asks a question about a mount and offer choices
 - ShellMountPasswordDialog: 
-- ShellProcessesDialog: 
+- ShellProcessesDialog: Extends [modalDialog.ModalDialog](#modaldialogjs) to provide a dialog that shows you which applications are impeding the removal of a device
 - GnomeShellMountOpHandler: 
 
 ## slider.js
