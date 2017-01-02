@@ -56,7 +56,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 * [overviewControls.js](#overviewcontrolsjs)
 * [overview.js](#overviewjs): The overview `Super Key`. This object have all we see normally when we are in the `Activities` headland. So, it has the dash, the workspaces, the window actors, the search bar, the display apps, etc
 * [padOsd.js](#padosdjs)
-* [panel.js](#paneljs): Defines the top panel
+* [panel.js](#paneljs): Defines the `Top Panel`
 * [panelMenu.js](#panelmenujs): Defines various helper functions for items in the panel
 * [pointerWatcher.js](#pointerwatcherjs)
 * [popupMenu.js](#popupmenujs): Defines the popup menus and items that can go in them
@@ -95,7 +95,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
     * [networkAgent.js](#networkagentjs): Manage network interface `wifi/wire/bluetooth`
     * [polkitAgent.js](#polkitagentjs): Handles popping up a password dialog on receiving authentication requests
     * [telepathyClient.js](#telepathyclientjs): Handles chat through telepathy and setting up notifications etc for these
-* [status](#statusjs) directory: This containst the files for all the standard status indicators in the status area
+* [status](#statusjs) directory: This contains the files for all the standard status indicators in the `Status Area`
     * [accessibility.js](#accessibilityjs): The accessibility `a11y` indicator
     * [bluetooth.js](#bluetoothjs): The bluetooth indicator
     * [brightness.js](#brightnessjs): The brightness indicator
@@ -232,7 +232,7 @@ See also [dateMenu.js](#datemenujs) which ties all these elements together
 - MessagesIndicator: 
 - IndicatorPad: 
 - FreezableBinLayout: 
-- DateMenuButton: Subclass of [PanelMenu.Button](#panelmenujs) to provide the date menu in the middle top panel.
+- DateMenuButton: Subclass of [PanelMenu.Button](#panelmenujs) to provide the date menu in the middle `Top Panel`.
 
 See also [calendar.js](#calendarjs)
 
@@ -307,7 +307,7 @@ This is a collection of functions to do with enabling and disabling extensions, 
 ## layout.js
 - MonitorConstraint: 
 - Monitor: 
-- LayoutManager: Manages layout of items on the stage `message tray/top panel/hot corners` and updates when monitors change
+- LayoutManager: Manages layout of items on the stage `Messsage Tray/Top Panel/Hot Corners` and updates when monitors change
 - HotCorner: Hot corners. The `Top Left` hot corner lets you switch to the overview
 - PressureBarrier: 
 
@@ -356,24 +356,27 @@ This is a collection of functions to do with enabling and disabling extensions, 
 - RestartMessage: 
 
 ## messageList.js
-- URLHighlighter: 
+- URLHighlighter: Class to markup URLs in notifications
 - ScaleLayout: 
 - LabelExpanderLayout: 
 - Message: 
 - MessageListSection: 
 
 ## messageTray.js
-- FocusGrabber: 
+![messageTray.js](/media/messagetray.png)
+- FocusGrabber: Grab focus to a notification
 - NotificationPolicy: 
 - NotificationGenericPolicy: 
 - NotificationApplicationPolicy: 
-- Notification: 
+- Notification: Base class defining a notification - the UI element. A notification belongs to a `Source` and has a title and text. In banner mode, the notification shows an icont, title, and banner on a single line. If the notification has additional elements in it or the banner doesn't fit on a single line, the notification is expandable. See `messageTray.js` for much more in-depth documentation.
 - NotificationBanner: 
 - SourceActor: 
 - SourceActorWithLabel: 
-- Source: 
-- MessageTray: 
-- SystemNotificationSource: 
+- Source: Abstract class defining a notifications source. It provides the UI element of the icon + notification counter in the message tray
+- MessageTray: The `MessageTray` class
+- SystemNotificationSource: Example of a `Source` - for system notifications
+
+If you wish to create notifications, the `MessageTray.Source` is the class you subclass. You need to implement the `createNotificationIcon` function at a minimum. When you want to send a notification from that source, use `source.notify(notification)`, where `notification` is a `MessageTray.Notification` or subclass thereof
 
 ## modalDialog.js
 - ModalDialog: A handy class defining a modal dialog. Use `.setButtons` to add buttons to it, and `open/close` to show or hide it.
@@ -391,7 +394,7 @@ Examples [endSessionDialog.js](#endsessiondialogjs), [extensionDownloader.js](#e
 - GtkNotificationDaemonNotification: 
 - GtkNotificationDaemonAppSource: 
 - GtkNotificationDaemon: 
-- NotificationDaemon: 
+- NotificationDaemon: GNOME Shell uses DBus to listen/send notifications; this handles that
 
 ## osdMonitorLabeler.js
 - OsdMonitorLabel: 
@@ -414,8 +417,10 @@ Examples [endSessionDialog.js](#endsessiondialogjs), [extensionDownloader.js](#e
 
 ## overview.js
 ![overview.js](/media/gnome-shell-overlay-mode-windows.png)
-- ShellInfo: 
-- Overview: 
+- ShellInfo: Handles spawning notification for actions performed from the overview and undoing them
+- Overview: The `Overview` triggered when you press the `Super` key. Made up of various tabs defined in other classes. Code in here is to do with animation when the overview shows and hides, loading search providers, interaction with the overview and so on
+
+See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDisplay.js](#appdisplayjs) and the core `Windows` tab [workspacesView.WorkspaceDisplay](workspacesviewjs)
 
 ## padOsd.js
 - KeybindingEntry: 
@@ -426,17 +431,33 @@ Examples [endSessionDialog.js](#endsessiondialogjs), [extensionDownloader.js](#e
 - PadOsdService: 
 
 ## panel.js
-- AppMenuButton: 
-- ActivitiesButton: 
-- PanelCorner: 
+![panel.js](/media/panel-1.png)
+> The panel. Yellow: _leftBox, Green: _centerBox, Red: _rightBox
+
+![panel.js](/media/panel-2.png)
+> AppMenuButton with its dropdown menu
+
+![panel.js](/media/panel-3.png)
+> AggregateMenu
+
+- AppMenuButton: This is the top titlebar (stored in `Main.panel._appMenu`). Inherits from [PanelMenu.Button](#panelmenujs), so it has a dropdown menu (by default showing `Quit`)
+- ActivitiesButton: The `Activities` button on the Top Left that triggers the overview. It is a [PanelMenu.Button](#panelmenujs) but without a menu. Contains the [Layout.HotCorner](layoutjs) that triggers the overview
+- PanelCorner: The black rounded corners that extend down from the `Top Panel` on either side of the screen. They are painted onto the screen using the panel colour
 - AggregateLayout: 
-- AggregateMenu: 
-- Panel: 
+- AggregateMenu: It is the `Status Area` button, it holds the `network/location/power/brightness/volume/system/etc` indicators
+- Panel: The `Top Panel`, stored in `Main.panel`. It is split into three `boxes` into which various panel elements are all placed:
+    - _leftBox: `Main.panel._leftBox`. Contains the `ActivitiesButton` and the `AppMenuButton`
+    - _centerBox: `Main.panel._centerBox`. Contains the [dateMenu.DateMenuButton](#datemenujs) button
+    - _rightBox: `Main.panel._rightBox`. Contains the `AggregateMenu`/`Status Area`. However when you want to insert icons into the `Status Area` you should use `Main.panel.addToStatusArea(role, myButton, position)` where `role` is the role that button performs (`network`, `a11y`, ...). There can only be one button performing each role in the `Status Area`
+
 
 ## panelMenu.js
-- ButtonBox: 
-- Button: 
-- SystemIndicator: 
+![panelMenu.js](/media/panelmenu.png)
+> Example of a panelMenu.Button, being the indicator and menu where the indicator is an icon
+
+- ButtonBox: The base `Button` class for buttons in the `Panel`
+- Button: Inherits from [panelMenu.ButtonBox](#panelmenujs) - adds a menu. So this is an object for use in the `Panel` that will have a menu and some sort of display item (e.g. an icon), which you are responsible for defining and adding. The [dateMenu.DateMenuButton](#datemenujs) is an example of this
+- SystemIndicator: This is just a `Button` with an icon. Feed it in an icon name (one of the stock icon names) and it will display it. Just about every icon you have in your `Status Area` is one of these
 
 ## pointerWatcher.js
 - PointerWatch: 
