@@ -147,7 +147,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 
 ## animation.js
 - Animation: 
-- AnimatedIcon: 
+- AnimatedIcon: Generate a animated icon (this is used for the "waves" when you reach the hot corner of the panel) 
 
 ## appDisplay.js
 ![appDisplay.js](/media/gnome-shell-overlay-mode-applications.png)
@@ -391,7 +391,7 @@ This file also handles dynamic workspaces (when you have no windows left on a wo
 
 ## messageTray.js
 ![messageTray.js](/media/messagetray.png)
-- FocusGrabber: Grab focus to a notification
+- FocusGrabber: Grab and control the focus for the message tray. We need this because the focus acts diferently depending of the siutation for the message tray.
 - NotificationPolicy: 
 - NotificationGenericPolicy: 
 - NotificationApplicationPolicy: 
@@ -401,7 +401,7 @@ This file also handles dynamic workspaces (when you have no windows left on a wo
 - SourceActorWithLabel: 
 - Source: Abstract class defining a notifications source. It provides the UI element of the icon + notification counter in the message tray
 - MessageTray: The `MessageTray` class
-- SystemNotificationSource: Example of a `Source` - for system notifications
+- SystemNotificationSource: Define a system source. It is inherit from `Source`. 
 
 If you wish to create notifications, the `MessageTray.Source` is the class you subclass. You need to implement the `createNotificationIcon` function at a minimum. When you want to send a notification from that source, use `source.notify(notification)`, where `notification` is a `MessageTray.Notification` or subclass thereof
 
