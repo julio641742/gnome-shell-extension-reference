@@ -691,9 +691,10 @@ Provides:
 - KeyringPrompter: 
 
 ## networkAgent.js
-- NetworkSecretDialog: 
-- VPNRequestHandler: 
-- NetworkAgent: 
+![networkAgent.js](/media/networkagent.png)
+- NetworkSecretDialog: Dialog that pops up getting you to enter in your password for wifi
+- VPNRequestHandler: Handles authentication requests for VPN
+- NetworkAgent: Listens for `NetworkAgent` on DBus - handles authentication requests
 
 ## polkitAgent.js
 - AuthenticationDialog: 
