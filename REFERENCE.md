@@ -99,7 +99,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
     * [accessibility.js](#accessibilityjs): The accessibility `a11y` indicator
     * [bluetooth.js](#bluetoothjs): The bluetooth indicator
     * [brightness.js](#brightnessjs): The brightness indicator
-    * [keyboard.js](#keyboardjs): Keyboard layout indicator
+    * [keyboard.js](#keyboardjs-2): Keyboard layout indicator
     * [location.js](#locationjs)
     * [network.js](#networkjs): The network `wifi/wired` indicator
     * [power.js](#powerjs): The power `battery life/power settings` indicator
@@ -726,7 +726,7 @@ These files define the standar status indicators in the status are
 ![brightness.js](/media/brightness.png)
 - Indicator: The [panelMenu.SystemIndicator](#panelmenujs) defining the brightness indicator.
 
-## keyboard.js
+## keyboard.js 2
 ![keyboard.js](/media/keyboard-indicator.png)
 - LayoutMenuItem: Extends [popupMenu.PopupMenuItem](#popupmenujs). Consists of text and an either label with the keyboard layout's abbreviation.
 - InputSource: 
