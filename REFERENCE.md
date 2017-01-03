@@ -685,7 +685,8 @@ Provides:
 - ComponentManager: 
 
 ## keyring.js
-- KeyringDialog: 
+![keyring.js](/media/keyring.png)
+- KeyringDialog: A [modalDialog.ModalDialog](#modaldialogjs) that is a dialog for `gnome-keyring`
 - KeyringDummyDialog: 
 - KeyringPrompter: 
 
