@@ -708,6 +708,8 @@ Provides:
 - ChatLineBox: 
 - ChatNotificationBanner: 
 
+**See the source for full documentation.**
+
 #Status Indicators
 These files define the standar status indicators in the status are
 
