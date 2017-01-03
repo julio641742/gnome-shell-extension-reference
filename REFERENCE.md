@@ -697,8 +697,9 @@ Provides:
 - NetworkAgent: Listens for `NetworkAgent` on DBus - handles authentication requests
 
 ## polkitAgent.js
-- AuthenticationDialog: 
-- AuthenticationAgent: 
+![polkitAgent.js](/media/polkitagent.png)
+- AuthenticationDialog: The [modalDialog.ModalDialog](#modaldialogjs) that appears when you have to enter your password to authenticate
+- AuthenticationAgent: Wrapper around `Shell.PolkitAuthenticationAgent`, listens for authentication requests and shows the `AuthenticationDialog`
 
 ## telepathyClient.js
 - TelepathyClient: 
