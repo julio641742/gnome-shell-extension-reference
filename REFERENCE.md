@@ -670,7 +670,7 @@ Provides:
 #Components
 
 ## automountManager.js
-![automountManager.js](/media/automountManager.png)
+![automountManager.js](/media/automountmanager.png)
 - AutomountManager: Uses `ConsoleKit` to listen for drives being added, removed, connected, disconnected, ejected, etc and automounts the drive
 
 ## autorunManager.js
