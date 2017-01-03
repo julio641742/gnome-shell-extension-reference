@@ -491,19 +491,19 @@ See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDis
 - PointerWatcher: 
 
 ## popupMenu.js
-- PopupBaseMenuItem: 
-- PopupMenuItem: 
-- PopupSeparatorMenuItem: 
-- Switch: 
-- PopupSwitchMenuItem: 
-- PopupImageMenuItem: 
-- PopupMenuBase: 
-- PopupMenu: 
+- PopupBaseMenuItem: Base class for popup menu items - and empty popup menu item. Has an `activate` signal that gets fired when the item is activated. Use `.addActor` to add visual elements to it like a `St.Label`. All the other `Popup*MenuItem` classes inherit from this.
+- PopupMenuItem: A `PopupBaseMenuItem` that displays text in a `St.Label`.
+- PopupSeparatorMenuItem: A `PopupBaseMenuItem` that is a separator.
+- Switch: An on-off toggle switch
+- PopupSwitchMenuItem: A `PopupBaseMenuItem` containing a label/text and a `Switch` to the right. Use the `toggled` signal to determine when the user toggles it.
+- PopupImageMenuItem: A `PopupBaseMenuItem` containing a label/text and an icon to the right.
+- PopupMenuBase: The base class for a popup menu (The menu that appears when you click most of the items in the status area). You don't use this directly (unless you are extending it); use any of its child classes and use `menu.addMenuItem` to add a popup menu item/submenu to it.
+- PopupMenu: Extends `PopupMenuBase` to provide a popup menu. This is the main popup menu class. (The one that gets used for all the [panelMenu.Button](#panelmenujs)s)
 - PopupDummyMenu: 
-- PopupSubMenu: 
-- PopupMenuSection: 
-- PopupSubMenuMenuItem: 
-- PopupMenuManager: 
+- PopupSubMenu: A popup submenu - designed to be nested within a `PopupMenu`, has a scrollbar in case the content is too long. If you want to add it to a `PopupMenu` as a collapsible menu section, use `PopupSubMenuMenuItem`
+- PopupMenuSection: This acts like a `PopupSubMenu`, but to the user just looks like a normal `PopupMenu`. It can be useful to add multiple `PopupMenuSection`s to a single `PopupMenu` to *group* items together code-wise (and to the user it looks like a flat popup menu).
+- PopupSubMenuMenuItem: A `PopupBaseMenuItem` defining a collapsible submenu - click on it to expand/open the submenu and reveal the items inside. It is really just a `PopupBaseMenuItem` with label and a `PopupSubMenu`. Use `myItem.menu.addMenuItem` to add to its menu.
+- PopupMenuManager:  Extracted from source `Basic implementation of a menu manager. Call addMenu to add menus`
 
 ## remoteMenu.js
 - RemoteMenuSeparatorItemMapper: 
