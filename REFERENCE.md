@@ -731,22 +731,26 @@ These files define the standar status indicators in the status are
 - GeolocationDialog: 
 
 ## network.js
+![network.js](/media/network.png)
 - NMConnectionItem: 
 - NMConnectionSection: 
 - NMConnectionDevice: 
-- NMDeviceWired: 
-- NMDeviceModem: 
-- NMDeviceBluetooth: 
+- NMDeviceWired: Extends `NMConnectionDevice` for wired connections. It will only display the `On/Off` switch if you only have one wired connection port - if you have more it will have a menu section with them all
+- NMDeviceModem: Extends `NMConnectionDevice` for modem `Dial up/Brandband`. Items for individual connections have text describing the connection with an icon for signal strength
+- NMDeviceBluetooth: Extends `NMConnectionDevice` for bluetooth.
 - NMWirelessDialogItem: 
 - NMWirelessDialog: 
-- NMDeviceWireless: 
+- NMDeviceWireless: Extends `NMConnectionDevice` for wireless connections.
 - NMVPNConnectionItem: 
 - NMVPNSection: 
 - DeviceCategory: 
-- NMApplet: 
+- NMApplet: The [panelMenu.SystemIndicator](#panelmenujs) defining the network connections indicator. Contains the various `NMConnectionDevice` subclasses for each connection device you have.
+
+Also contains functions for comparing `SSID`s and converting signal strengths to a category `excellent/good/ok/weak`
 
 ## power.js
-- Indicator: 
+![power.js](/media/power.png)
+- Indicator: The [panelMenu.SystemIndicator](#panelmenujs) defining the power indicator. Displays an appropiate icon for your current power state as well as calculating estimated battery life, etc
 
 ## rfkill.js
 - RfkillManager: 
@@ -756,15 +760,17 @@ These files define the standar status indicators in the status are
 - Indicator: 
 
 ## system.js
+![system.js](/media/system.png)
 - AltSwitcher: 
 - Indicator: 
 
 ## volume.js
+![volume.js](/media/volume.png)
 - StreamSlider: 
 - OutputStreamSlider: 
 - InputStreamSlider: 
 - VolumeMenu: 
-- Indicator: 
+- Indicator: The [panelMenu.SystemIndicator](#panelmenujs) defining the volume indicator. Containst a [slider.Slider](#slider.js) for the volume of each of your sound devices and adjusts its icon according to the volume
 
 ###### ###############################################################################
 
