@@ -727,7 +727,8 @@ These files define the standar status indicators in the status are
 - Indicator: The [panelMenu.SystemIndicator](#panelmenujs) defining the brightness indicator.
 
 ## keyboard.js
-- LayoutMenuItem: 
+![keyboard.js](/media/keyboard-indicator.png)
+- LayoutMenuItem: Extends [popupMenu.PopupMenuItem](#popupmenujs). Consists of text and an either label with the keyboard layout's abbreviation.
 - InputSource: 
 - InputSourcePopup: 
 - InputSourceSwitcher: 
