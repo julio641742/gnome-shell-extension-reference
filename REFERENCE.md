@@ -355,6 +355,31 @@ This is a collection of functions to do with enabling and disabling extensions, 
 - MagShaderEffects: 
 
 ## main.js
+This file is like the `int main();` of programs, setting up the whole GNOME Shell interface and making parts available to everyone else (`Top Panel/Overview/Message Tray/...`). Many global objects in GNOME Shell create just one instance. These are stored here.
+This file also handles dynamic workspaces (when you have no windows left on a workspace it is removed).
+
+- Some of the objects stored to be accessed by others (there are more, see `main.js`):
+    - panel: this is the top panel. If you want to add buttons to the status area etc, you use this panel to add them to.
+    - hotCorners: the hot corner(s), e.g. the top-left one (move your cursor over it and the Overview opens).
+    - overview: the Overview.
+    - runDialog: the dialog when you press Alt+F2.
+    - lookingGlass: the looking glass.
+    - messageTray: the message tray.
+    - shellDBusService: GNOME-Shell's Dbus service.
+    - magnifier: the accessibility magnifier.
+    - keyboard: the accessibility on-screen keyboard.
+- Some handy functions (there are other functions in main.js too; these are just some handy one):
+
+- `getThemeStylesheet()`: gets the file path for the (custom) theme you are using for GNOME Shell, if any (e.g. `$HOME/.themes/<themename>/gnome-shell/gnome-shell.css`). If you are not using a custom gnome-shell theme, this will be null.
+- `setThemeStylesheet(path)`: sets the file path for the custom theme for GNOME Shell (but doesn't actually cause a theme change; use `loadTheme` to reload the theme after doing this).
+- `loadTheme()`: reloads the style for GNOME Shell. It sets the `getThemeStylesheet` (any custom GNOME Shell theme if you have one, or just the default `/usr/share/gnome-shell/themes/gnome-shell.css`) as the top priority style sheet, and then loads all the extra stylesheets (e.g. extension stylesheets) at a lower priority. This is why if you set a style in your extension's `stylesheet.css` that conflicts with the a GNOME Shell style class, GNOME Shell will win.
+- `notify(msg, details)`: creates a GNOME Shell notification (i.e. popup from the message tray) with title `msg` and text `details`.
+- `notifyError(msg, details)`: calls `notify(msg, details)` to send a popup notification from the message tray
+- `pushModal(actor, timestamp, options)`: Grabs all keyboard/mouse input to the stage and focuses actor. When the modal stack is empty we return focus to whatever had focus before `pushModal` was called. The `Overview`, `Run Dialog`, `Looking Glass`, and `Modal Dialogs` all use this (there are probably more too).
+- `popModal(actor, timestamp)`: Opposite of `pushModal` (removes actor from the modal stack).
+- `initializeDeferredWork(actor, callback, props)`: Sets up a callback to be invoked either when actor is mapped, or when the machine is idle - useful if your actor isn't always visible on the screen and you don't want to consume resources updating if the actor isn't actually visible. (The `Overview` actors are all examples of these). Returns a work ID that you can use with `queueDeferredWork` every time you update the actor.
+- `queueDeferredWork(workId)`: Ensures that the work identified by `workId` will be run on map or timeout. It is called by default on `initializeDeferredWork`, call it again when (say) the data being displayed by the actor changes.
+
 - RestartMessage: 
 
 ## messageList.js
