@@ -109,6 +109,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
     * [volume.js](#volumejs): The `volumen/sound` settings indicator
 
 #Files `imports.misc`
+* [config.js](#configjs): A collection of constants that could come in handy (number versions)
 * [extensionUtils.js](#extensionutilsjs): Set of utilities to do with extensions
 * [fileUtils.js](#fileutilsjs): Set of helpful functions for files
 * [gnomeSession.js](#gnomesessionjs): DBus stuff to do with `org.gnome.SessionManager`
@@ -770,24 +771,52 @@ Also contains functions for comparing `SSID`s and converting signal strengths to
 - OutputStreamSlider: 
 - InputStreamSlider: 
 - VolumeMenu: 
-- Indicator: The [panelMenu.SystemIndicator](#panelmenujs) defining the volume indicator. Containst a [slider.Slider](#slider.js) for the volume of each of your sound devices and adjusts its icon according to the volume
+- Indicator: The [panelMenu.SystemIndicator](#panelmenujs) defining the volume indicator. Containst a [slider.Slider](#sliderjs) for the volume of each of your sound devices and adjusts its icon according to the volume
 
 ###### ###############################################################################
 
+## config.js
+Contains the constants:
+- PACKAGE_NAME: `gnome-shell` (non-localized name of the package).
+- PACKAGE_VERSION: your gnome-shell version, a string (e.g. '3.22.2').
+- HAVE_BLUETOOTH: whether `gnome-bluetooth` is available (1 or 0).
+- HAVE_NETWORKMANAGER: whether `networkmanager` is available (0 or 1)
+- GETTEXT_PACKAGE: `gnome-shell`. GNOME-shell's gettext package name.
+- LOCALEDIR: the locale directory (/usr/share/locale).
+- LIBEXECDIR: /usr/libexe/
+- SYSCONFDIR: /etc
+
 ## extensionUtils.js
+Contains the extensions object (maps UUID to extension object, described in `createExtensionObject`)
+- Helpful functions:
+    - `getCurrentExtension`: call it from your extension file to get the current extension object (`imports.misc.extensionUtils.getCurrentExtension()`).
+    - `versionCheck`: checks if the version in metadata.json is compatible with the current shell version.
+    - `isOutOfDate`: checks if an extension is out of date.
+    - `createExtensionObject`: creates an object representing an extension.
+
 - ExtensionFinder: 
 
 ## fileUtils.js
+Functions:
+- deleteGFile: deletes a `Gio` file object ("work around `delete` being a keyword in JS" -- just calls `file['delete'](null)`).
+- recursivelyDeleteDir: recursively deletes a directory.
+- recursivelyMoveDir: recursively move a directory.
 
 ## gnomeSession.js
 
 ## history.js
-- HistoryManager: 
+- HistoryManager: An object that remembers text up to 512 items `DEFAULT_LIMIT` and optionally saves them into a `gsettings` key
 
 ## ibusManager.js
 - IBusManager: 
 
 ## jsParse.js
+This is a set of functions doing some basic parsing of javascript code in order to provide sensible autocompletions.
+
+The main function you will probably want to call from external modules (according to the source) is `getCompletions(text, commandHeader, globalCompletionList)`.
+There are a whole bunch of other helper functions in there too. 
+
+> See the source for full documentation.
 
 ## keyboardManager.js
 - KeyboardManager: 
@@ -797,17 +826,26 @@ Also contains functions for comparing `SSID`s and converting signal strengths to
 - LoginManagerDummy: 
 
 ## modemManager.js
-- ModemGsm: 
-- ModemCdma: 
+- ModemGsm: Class for interacting with DBus interface `org.freedesktop.ModemManager.Modem.Gsm.Network` (mobile internet).
+- ModemCdma: Class for interacting with DBus interface `org.freedesktop.ModemManager.Modem.Cdma` (mobile internet).
 - BroadbandModem: 
 
 ## objectManager.js
 - ObjectManager: 
 
 ## params.js
+Contains a handy function parse that parses user-provided parameters against default parameters (filling in with defaults if not supplied), 
+and throwing an error if unrecognised parameters are given (if unrecognised parameters are not allowed). Used throughout the `js/ui/*.js` code.
 
 ## smartcardManager.js
 - SmartcardManager: 
 
 ## util.js
+- Handful of utility functions:
+    - findUrls: searches input string for URLs.
+    - spawn: spawns a process specified by the argument in array form (e.g. `['ls', '-al', '$HOME']`), handling errors by popping up a notification in the message tray.
+    - spawnCommandLine: spawns a process specified by a string (e.g. `ls -al $HOME`), handling errors by popping up a notification in the message tray (using `Main.notifyError(#main.notifyError)`).
+    
 - CloseButton: 
+
+> See the source for full documentation.
