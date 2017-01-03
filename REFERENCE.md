@@ -544,6 +544,7 @@ Provides:
 - `collectStatistics()`: Convenience function to trigger statistics collection.
 - `runPerfScript(scriptModule)`: module object with run and finish functions and event handlers. Runs a script for automated collection of performance data. The script is defined as a Javascript module with specified contents. See the `scripting.js` file for much more detail (it's documented in there).
 
+**See the source for full documentation.**
 
 ## search.js
 - MaxWidthBin: 
@@ -555,6 +556,8 @@ Provides:
 - GridSearchResults: 
 - SearchResults: 
 - ProviderIcon: 
+
+**See the source for full documentation.**
 
 ## separator.js
 - HorizontalSeparator: 
@@ -590,6 +593,8 @@ Provides:
 
 ## tweener.js
 - ClutterFrameTicker: 
+
+**See the source for full documentation.**
 
 ## unlockDialog.js
 - UnlockDialog: 
@@ -661,7 +666,6 @@ Provides:
 
 ## xdndHandler.js
 - XdndHandler: Sets up `Xdnd` and passes through signals. When a `non-gnome-shell object` is first dragged over a `gnome-shell-object`, tha handler fires a `drag-begin` signal. When the object being dragged leaves the `gnome-shell-object`, the `drage-end` signal is fired. The class somehow incorporates with [dnd.js](#dndjs) code too whereby a draggable target/object registered with `dnd.js` has the appropiate events called on it. Use `Main.xdndHandler` to access the instance of the handler and connect to its signals.
-
 
 #Components
 
@@ -773,7 +777,8 @@ Also contains functions for comparing `SSID`s and converting signal strengths to
 - VolumeMenu: 
 - Indicator: The [panelMenu.SystemIndicator](#panelmenujs) defining the volume indicator. Containst a [slider.Slider](#sliderjs) for the volume of each of your sound devices and adjusts its icon according to the volume
 
-###### ###############################################################################
+
+#Files `imports.misc`
 
 ## config.js
 Contains the constants:
@@ -816,7 +821,7 @@ This is a set of functions doing some basic parsing of javascript code in order 
 The main function you will probably want to call from external modules (according to the source) is `getCompletions(text, commandHeader, globalCompletionList)`.
 There are a whole bunch of other helper functions in there too. 
 
-> See the source for full documentation.
+**See the source for full documentation.**
 
 ## keyboardManager.js
 - KeyboardManager: 
@@ -848,4 +853,4 @@ and throwing an error if unrecognised parameters are given (if unrecognised para
     
 - CloseButton: 
 
-> See the source for full documentation.
+**See the source for full documentation.**
