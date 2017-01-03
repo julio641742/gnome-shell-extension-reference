@@ -491,6 +491,8 @@ See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDis
 - PointerWatcher: 
 
 ## popupMenu.js
+![popupMenu.js](/media/popupmenu-1.png)
+![popupMenu.js](/media/popupmenu-2.png)
 - PopupBaseMenuItem: Base class for popup menu items - and empty popup menu item. Has an `activate` signal that gets fired when the item is activated. Use `.addActor` to add visual elements to it like a `St.Label`. All the other `Popup*MenuItem` classes inherit from this.
 - PopupMenuItem: A `PopupBaseMenuItem` that displays text in a `St.Label`.
 - PopupSeparatorMenuItem: A `PopupBaseMenuItem` that is a separator.
