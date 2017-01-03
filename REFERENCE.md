@@ -670,14 +670,16 @@ Provides:
 #Components
 
 ## automountManager.js
-- AutomountManager: 
+![automountManager.js](/media/automountManager.png)
+- AutomountManager: Uses `ConsoleKit` to listen for drives being added, removed, connected, disconnected, ejected, etc and automounts the drive
 
 ## autorunManager.js
-- ContentTypeDiscoverer: 
-- AutorunManager: 
-- AutorunDispatcher: 
-- AutorunSource: 
-- AutorunNotification: 
+- HotplugSniffer: Listens on the DBus for something...
+- ContentTypeDiscoverer: Guesses what content is on a media `Filesystem/Photos/Documents/Media`
+- AutorunManager: Master class that handles monitoring when volumens are mounted/dismounted, uses the other classes in the file to determine what content is on the media and send a notification with the right options for that media on it (If it is a camera card offer to view photos, if it is music offer to play it, ...)
+- AutorunDispatcher: Determines a mounted volumen's autorun settings for its transient notification
+- AutorunSource: Inherits from [messageTray.Source](#messagetrayjs). The notification source for the autorun notification that you get upon plugging in a device.
+- AutorunNotification: Inherits from [messageTray.Notification](#messagetrayjs). Handles the creation of the transient notification you get upon plugging in a device. This is the notification that says `View photos with Shotwel`, `Play music`, `Browse Files`, etc
 
 ## __init__.js
 - ComponentManager: 
