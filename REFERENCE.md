@@ -548,7 +548,7 @@ Provides:
 
 ## search.js
 - MaxWidthBin: 
-- SearchResult: 
+- SearchResult: Class representing a single result of a search in the `Overview`
 - ListSearchResult: 
 - GridSearchResult: 
 - SearchResultsBase: 
