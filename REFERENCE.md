@@ -132,7 +132,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - AccessDialogDBus:
 
 ## altTab.js
-![altTab.js](https://raw.githubusercontent.com/julio641742/gnome-shell-extension-reference/master/media/alttab.png)
+![altTab.js](/media/alttab.png)
 - AppSwitcherPopup: 
 - CyclerHighlight: 
 - CyclerPopup: 
