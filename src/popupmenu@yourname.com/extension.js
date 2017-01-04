@@ -46,7 +46,7 @@ const PopupMenuExample = new Lang.Class({
 		This is calling the parent constructor
 		1 is the menu alignment (1 is left, 0 is right, 0.5 is centered)
 		`PopupMenuExample` is the name
-		true if you dont want to create a menu automatically, otherwise false
+		true if you want to create a menu automatically, otherwise false
 		*/
 		this.parent(1, 'PopupMenuExample', false);
 
