@@ -21,7 +21,7 @@ You will need to know Javascript, CSS and XML in order to create a beautiful GNO
 - [GNOME Shell Miscellaneous Files](https://github.com/GNOME/gnome-shell/tree/master/js/misc)
 - [GNOME Shell CSS Code](https://github.com/GNOME/gnome-shell/blob/master/data/theme/gnome-shell.css)
 
-- [Clutter Reference]((https://developer.gnome.org/clutter/stable/)
+- [Clutter Reference](https://developer.gnome.org/clutter/stable/)
 - [Tweener Documentation](http://hosted.zeh.com.br/tweener/docs/en-us/)
 - [Shell Toolkit (St) Reference](https://www.roojs.org/seed/gir-1.2-gtk-3.0/seed/St.html)
 
@@ -47,4 +47,4 @@ You will need to know Javascript, CSS and XML in order to create a beautiful GNO
 
 
 
-#**Any contribution to this guide is welcomed**
+###**Any contribution to this guide is welcomed**

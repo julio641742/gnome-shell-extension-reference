@@ -16,7 +16,7 @@ Notes:
 
 **More information found in**
 
-- [Clutter Reference]((https://developer.gnome.org/clutter/stable/)
+- [Clutter Reference](https://developer.gnome.org/clutter/stable/)
 - [Tweener Documentation](http://hosted.zeh.com.br/tweener/docs/en-us/)
 - [Shell Toolkit (St) Reference](https://www.roojs.org/seed/gir-1.2-gtk-3.0/seed/St.html)
 
