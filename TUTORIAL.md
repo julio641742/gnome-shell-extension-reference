@@ -5,8 +5,8 @@
 > Read [README.md](README.md)
 
 ## Index
-- [First Extension](FIRST-EXTENSION.md): Create your very first extension
-- [PopupMenu Extension](POPUPMENU-EXTENSION.md): Learn how to use [popupMenu.js](REFERENCE.md#popupmenujs)
+- [First Extension](./tutorials/FIRST-EXTENSION.md): Create your very first extension
+- [PopupMenu Extension](./tutorials/POPUPMENU-EXTENSION.md): Learn how to use [popupMenu.js](REFERENCE.md#popupmenujs)
 
 - `MORE COMMING SOON`
 
