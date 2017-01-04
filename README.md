@@ -29,6 +29,7 @@ You will need to know Javascript, CSS and XML in order to create a beautiful GNO
 
 ### Useful reference
 - [Learn Javascript](https://developer.mozilla.org/en-US/learn/javascript)
+- [Learn CSS](http://www.w3schools.com/css/)
 - [GNOME Shell Extensions Available](https://extensions.gnome.org/)
 
 - [GNOME Shell Github Page](https://github.com/GNOME/gnome-shell)

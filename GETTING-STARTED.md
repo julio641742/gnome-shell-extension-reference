@@ -112,9 +112,9 @@ Inside the directory, the bare bones of an extension are two files, `metadata.js
 ```
 
 The `extension.js` file is the GNOME-javascript file that GNOME Shell uses to run your extension. It MUST have at least three functions in it:
-- `init`: called to initialise your extension.
-- `enable`: called when the user actually enables your extension. This is where you do whatever you want your extension to do.
-- `disable`: called when the user disables your extension. It should stop whatever your extension does and restore the system to a state such that it looks like your extension was never there.
+- `init()`: **Don’t do anything major in `init()`** It is there to have anything that needs to happen at first-run, like binding text domains. Do not make any UI modifications or setup any callbacks or anything in `init()`. Your extension will break, and gnome-developers will reject it. Do any and all modifications in `enable()`. Undo all UI modifications in `disable()` 
+- `enable()`: called when the user actually enables your extension. This is where you do whatever you want your extension to do.
+- `disable()`: called when the user disables your extension. It should stop whatever your extension does and restore the system to a state such that it looks like your extension was never there.
 
 There is also an optional file `stylesheet.css` which you can use to style things in your extension, and you can of course have other files (like images, extra javascript files, ...).
 
