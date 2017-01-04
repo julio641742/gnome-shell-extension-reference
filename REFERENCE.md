@@ -1,19 +1,19 @@
-#GNOME Shell Javascript Source Reference
+# GNOME Shell Javascript Source Reference
 <br>
 Documentation for the Javascript files that make up GNOME Shell's Javascript side
 
-#####Notes
+##### Notes
 - The actual version of GNOME Shell as of today is 3.22
 - This is just a reference list, not full documentation or anything.
 - Use this to get a quick idea of what is in what file.
 - I might not be correct
 - Contributions are welcome
 
-#####Links
+##### Links
 - [GNOME Shell UI Files](https://github.com/GNOME/gnome-shell/tree/master/js/ui)
 - [GNOME Shell Miscellaneous Files](https://github.com/GNOME/gnome-shell/tree/master/js/misc)
 
-#Files `imports.ui`
+# Files `imports.ui`
 * [accessDialog.js](#accessdialogjs)
 * [altTab.js](#alttabjs): The popup that appears when you press `ALT + Tab`
 * [animation.js](#animationjs)
@@ -108,7 +108,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
     * [system.js](#systemjs)
     * [volume.js](#volumejs): The `volumen/sound` settings indicator
 
-#Files `imports.misc`
+# Files `imports.misc`
 * [config.js](#configjs): A collection of constants that could come in handy (number versions)
 * [extensionUtils.js](#extensionutilsjs): Set of utilities to do with extensions
 * [fileUtils.js](#fileutilsjs): Set of helpful functions for files
@@ -125,7 +125,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 * [util.js](#utiljs): A set of useful functions, mainly to do with spawning external processes in the background
 
 
-#Overview of classes in each file
+# Overview of classes in each file
 
 ## accessDialog.js
 - AccessDialog:
@@ -694,7 +694,7 @@ Provides:
 ## xdndHandler.js
 - XdndHandler: Sets up `Xdnd` and passes through signals. When a `non-gnome-shell object` is first dragged over a `gnome-shell-object`, tha handler fires a `drag-begin` signal. When the object being dragged leaves the `gnome-shell-object`, the `drage-end` signal is fired. The class somehow incorporates with [dnd.js](#dndjs) code too whereby a draggable target/object registered with `dnd.js` has the appropiate events called on it. Use `Main.xdndHandler` to access the instance of the handler and connect to its signals.
 
-#Components
+# Components
 
 ## automountManager.js
 ![automountManager.js](./media/automountmanager.png)
@@ -737,7 +737,7 @@ Provides:
 
 **See the source for full documentation.**
 
-#Status Indicators
+# Status Indicators
 These files define the standar status indicators in the status are
 
 ## accessibility.js
@@ -813,7 +813,7 @@ Also contains functions for comparing `SSID`s and converting signal strengths to
 - Indicator: The [panelMenu.SystemIndicator](#panelmenujs) defining the volume indicator. Containst a [slider.Slider](#sliderjs) for the volume of each of your sound devices and adjusts its icon according to the volume
 
 
-#Files `imports.misc`
+# Files `imports.misc`
 
 ## config.js
 Contains the constants:

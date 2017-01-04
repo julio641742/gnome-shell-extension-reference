@@ -1,24 +1,24 @@
 <h1 align="center">
     <br>
-    <img width="400" src="/media/gnome-logo.png" alt="Gnome Shell Extension Reference">
+    <img width="400" src="./media/gnome-logo.png" alt="Gnome Shell Extension Reference">
     <br>
     <br>
     <br>
 </h1>
 
-#GNOME Shell Extension Reference
+# GNOME Shell Extension Reference
 
 This is an unofficial reference guide for GNOME Shell extensions
 
 You will need to know Javascript, CSS and XML in order to create a beautiful GNOME Shell Extension
 
 
-####Progress
+#### Progress
 - [ ] Step by step tutorial
 - [ ] Complete Reference
 
 
-##Menu
+## Menu
 
 * [GNOME Shell Overview](GNOME-SHELL.md)
 * [Getting Started](GETTING-STARTED.md)
@@ -27,7 +27,7 @@ You will need to know Javascript, CSS and XML in order to create a beautiful GNO
 * [GNOME Shell Javascript Source Reference](REFERENCE.md) **NOT COMPLETED YET**
 
 
-###Useful reference
+### Useful reference
 - [Learn Javascript](https://developer.mozilla.org/en-US/learn/javascript)
 - [GNOME Shell Extensions Available](https://extensions.gnome.org/)
 
@@ -44,9 +44,9 @@ You will need to know Javascript, CSS and XML in order to create a beautiful GNO
 * [GJS Style Guide](https://live.gnome.org/GnomeShell/Gjs_StyleGuide)
 
 
-##Almost all the references were extracted from different websites
+## Almost all the references were extracted from different websites
 * [Source Material](SOURCES.md)
 
 
 
-###**Any contribution to this guide is welcomed**
+### **Any contribution to this guide is welcomed**
