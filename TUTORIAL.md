@@ -8,3 +8,11 @@ gnome-shell-extension-tool --create-extension
 ```
 
 ![terminal](/media/gnome-shell-extension-tool-create-extension.png)
+
+Then you are asked about the name of your application. For this extension we put in `my first extension` and press enter.
+
+Then you are asked about a description. Put something like: `this is an example of an extension`
+
+Then you are asked about an UUID. In that case, we write `first-extension@yourname.com` and press enter.
+
+Tada! The code of the main file is shown in gedit. 
