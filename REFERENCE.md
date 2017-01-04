@@ -132,7 +132,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - AccessDialogDBus:
 
 ## altTab.js
-![altTab.js](/media/alttab.png)
+![altTab.js](./media/alttab.png)
 - AppSwitcherPopup: 
 - CyclerHighlight: 
 - CyclerPopup: 
@@ -150,7 +150,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - AnimatedIcon: Generate a animated icon (this is used for the "waves" when you reach the hot corner of the panel) 
 
 ## appDisplay.js
-![appDisplay.js](/media/gnome-shell-overlay-mode-applications.png)
+![appDisplay.js](./media/gnome-shell-overlay-mode-applications.png)
 - BaseAppView: 
 - PageIndicatorsActor: 
 - PageIndicators: 
@@ -184,13 +184,13 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - BackgroundMenu: 
 
 ## boxpointer.js
-![BoxPointer.js](/media/boxpointer.png)
+![BoxPointer.js](./media/boxpointer.png)
 > BoxPointer is the triangle bit
 
 - BoxPointer: The triangle arrow connecting a `[popupMenu](#popupmenujs)` to its source (you can configure what side of the menu the pointer appears).
 
 ## calendar.js
-![Calendar.js](/media/calendar.png)
+![Calendar.js](./media/calendar.png)
 - Contains several functions for manipulating date formats, day abbreviations, etc
 - CalendarEvent: An event in the calendar
 - EmptyEventSource: `Interface for appointments/events`
@@ -206,17 +206,17 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 See also [dateMenu.js](#datemenujs) which ties all these elements together
 
 ## checkBox.js
-![checkBox.js](/media/checkbox.png)
+![checkBox.js](./media/checkbox.png)
 - CheckBox: Checkbox itself
 
 ## ctrlAltTab.js
-![ctrlAltTab.js](/media/ctrlalttab.png)
+![ctrlAltTab.js](./media/ctrlalttab.png)
 - CtrlAltTabManager: Handles `CTRL + ALT + Tab` behaviour - showing the popup, setting up the stage to be ready for keyboard navigation
 - CtrlAltTabPopup: The UI popup itself
 - CtrlAltTabSwitcher: UI element holding all the options you `ALT + Tab` between
 
 ## dash.js
-![dash.js](/media/dash.png)
+![dash.js](./media/dash.png)
 - DashItemContainer: Helper class - each item in the dash is one of these
 - ShowAppsIcon: 
 - DragPlaceholderItem: 
@@ -225,7 +225,7 @@ See also [dateMenu.js](#datemenujs) which ties all these elements together
 - Dash: The master `Dash` class, making use of all the other classes
 
 ## dateMenu.js
-![dash.js](/media/datemenu.png)
+![dash.js](./media/datemenu.png)
 > The date menu. Red: DateMenuButton, Green: TodayButton, Yellow: WorldClockSection
 
 - TodayButton: 
@@ -251,7 +251,7 @@ See [dash.js](#dashjs) and [workspacesView.js](#workspacesviewjs) for examples
 - EdgeDragAction: 
 
 ## endSessionDialog.js
-![endSessionDialog.js](/media/endsessiondialog-1.png) ![endSessionDialog.js](/media/endsessiondialog-2.png)
+![endSessionDialog.js](./media/endsessiondialog-1.png) ![endSessionDialog.js](./media/endsessiondialog-2.png)
 - EndSessionDialog: The end session dialog. Handles the UI part. In terms of actually `logging out/shutting down/etc` the dialog simply sends a message to the GNOME `SessionManager` DBus to request a shutdown rather thant doing the shutdown itself
 
 ## environment.js
@@ -264,7 +264,7 @@ This module sets upd the `GJS` environment for the rest of the JS files:
 - Initialises various things the shell needs to work
 
 ## extensionDownloader.js
-![extensionDownloader.js](/media/extensiondownloader.png)
+![extensionDownloader.js](./media/extensiondownloader.png)
 
 This is a collection of functions to do with installing, updating and uninstalling extensions
 > The extension UUID is like `extensionname@some.website.com`
@@ -300,7 +300,7 @@ This is a collection of functions to do with enabling and disabling extensions, 
 - PaginatedIconGrid: 
 
 ## keyboard.js
-![keyboard.js](/media/keyboard.png)
+![keyboard.js](./media/keyboard.png)
 - Key: A key on the keyboard
 - Keyboard: The `Keyboard` class
 - KeyboardSource: Inherits from [MessageTray.Source](#messagetrayjs), shows the keyboard in the message tray
@@ -321,13 +321,13 @@ This is a collection of functions to do with enabling and disabling extensions, 
 - Lightbox: A shade obscuring the specific container actor
 
 ## lookingGlass.js
-![lookingGlass.js](/media/lookingglass-autocomplete.png)
+![lookingGlass.js](./media/lookingglass-autocomplete.png)
 > Autocomplete function in the Looking Glass
 
-![lookingGlass.js](/media/lookingglass-inspector.png)
+![lookingGlass.js](./media/lookingglass-inspector.png)
 > Looking Glass Inspector - outlines the actor your mouse is over and lets you pick it
 
-![lookingGlass.js](/media/lookingglass-objinspector.png)
+![lookingGlass.js](./media/lookingglass-objinspector.png)
 > Looking Glass ObjInspector - inspecting `Main.panel.statusArea.dateMenu`
 
 - AutoComplete: Adds completion behaviour on `Tab/double-Tab` to the Looking Glass like the terminal
@@ -348,7 +348,7 @@ This is a collection of functions to do with enabling and disabling extensions, 
 - ShellMagnifierZoomRegion: 
 
 ## magnifier.js
-![magnifier.js](/media/magnifier.png)
+![magnifier.js](./media/magnifier.png)
 - Magnifier: Defines the shell magnifier
 - ZoomRegion: Defines a particular zoom region
 - Crosshairs: Defines the crosshairs of the magnifier
@@ -390,7 +390,7 @@ This file also handles dynamic workspaces (when you have no windows left on a wo
 - MessageListSection: 
 
 ## messageTray.js
-![messageTray.js](/media/messagetray.png)
+![messageTray.js](./media/messagetray.png)
 - FocusGrabber: Grab and control the focus for the message tray. We need this because the focus acts diferently depending of the siutation for the message tray.
 - NotificationPolicy: 
 - NotificationGenericPolicy: 
@@ -443,7 +443,7 @@ Examples [endSessionDialog.js](#endsessiondialogjs), [extensionDownloader.js](#e
 - ControlsManager: 
 
 ## overview.js
-![overview.js](/media/gnome-shell-overlay-mode-windows.png)
+![overview.js](./media/gnome-shell-overlay-mode-windows.png)
 - ShellInfo: Handles spawning notification for actions performed from the overview and undoing them
 - Overview: The `Overview` triggered when you press the `Super` key. Made up of various tabs defined in other classes. Code in here is to do with animation when the overview shows and hides, loading search providers, interaction with the overview and so on
 
@@ -458,13 +458,13 @@ See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDis
 - PadOsdService: 
 
 ## panel.js
-![panel.js](/media/panel-1.png)
+![panel.js](./media/panel-1.png)
 > The panel. Yellow: _leftBox, Green: _centerBox, Red: _rightBox
 
-![panel.js](/media/panel-2.png)
+![panel.js](./media/panel-2.png)
 > AppMenuButton with its dropdown menu
 
-![panel.js](/media/panel-3.png)
+![panel.js](./media/panel-3.png)
 > AggregateMenu
 
 - AppMenuButton: This is the top titlebar (stored in `Main.panel._appMenu`). Inherits from [panelMenu.Button](#panelmenujs), so it has a dropdown menu (by default showing `Quit`)
@@ -479,7 +479,7 @@ See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDis
 
 
 ## panelMenu.js
-![panelMenu.js](/media/panelmenu.png)
+![panelMenu.js](./media/panelmenu.png)
 > Example of a panelMenu.Button, being the indicator and menu where the indicator is an icon
 
 - ButtonBox: The base `Button` class for buttons in the `Panel`
@@ -491,8 +491,8 @@ See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDis
 - PointerWatcher: 
 
 ## popupMenu.js
-![popupMenu.js](/media/popupmenu-1.png)
-![popupMenu.js](/media/popupmenu-2.png)
+![popupMenu.js](./media/popupmenu-1.png)
+![popupMenu.js](./media/popupmenu-2.png)
 - PopupBaseMenuItem: Base class for popup menu items - and empty popup menu item. Has an `activate` signal that gets fired when the item is activated. Use `.addActor` to add visual elements to it like a `St.Label`. All the other `Popup*MenuItem` classes inherit from this.
 - PopupMenuItem: A `PopupBaseMenuItem` that displays text in a `St.Label`.
 - PopupSeparatorMenuItem: A `PopupBaseMenuItem` that is a separator.
@@ -519,7 +519,7 @@ See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDis
 - RemoteSearchProvider2: 
 
 ## runDialog.js
-![runDialog.js](/media/rundialog.png)
+![runDialog.js](./media/rundialog.png)
 - RunDialog: The run dialog that you get on `ALT + F2`. Type commands in here to have them executed. Also defines a couple of `special` commands:
     - lg: opens the [Looking Glass](#lookingglassjs)
     - r, restart: Restarts GNOME Shel. Needed if you make changes to JS files [**WARNING**: Wayland doesn't support this command, you need to change to Xorg Display Server when you log into your account]
@@ -598,11 +598,11 @@ Provides:
 - ScreenSaverDBus: 
 
 ## shellEntry.js
-![shellEntry.js](/media/shellentry.png)
+![shellEntry.js](./media/shellentry.png)
 - EntryMenu: A subclass of [popupMenu.PopupMenu](#popupmenujs) used to provide a context menu to a `Clutter.Entry` or `St.Entry` (text box). Do not use this class directly; instead use `ShellEntry.addContextMenu(entry)`. The context menu acts like so: when the user `right-click` the entry, they get a popup menu with `Paste/Copy` and if it is a password dialog it will have a `Show/Hide character` item too
 
 ## shellMountOperation.js
-![shellMountOperation.js](/media/shellmountoperation.png)
+![shellMountOperation.js](./media/shellmountoperation.png)
 - ListItem: A button displaying a particular application's icon and name, that will launch the application when clicked. These are used in the `ShellProcessesDialog`, one per application that impedes the removal of a device
 - ShellMountOperation: 
 - ShellUnmountNotifier: 
@@ -638,7 +638,7 @@ Provides:
 - ViewSelector: 
 
 ## windowAttentionHandler.js
-![shellMountOperation.js](/media/windowattentionhandler.png)
+![shellMountOperation.js](./media/windowattentionhandler.png)
 - WindowAttentionHandler: Handles `window-demands-attention` signals from `global.display` and pops up the `x is ready` notification upon receiving it. When you start up and app it can take a while to load and in the meantime you move on to another window; when the window does actually load you get a notification letting you know the application is ready to be used
 - Source: A [messageTray.Source](#messagetrayjs) tailored to window attention requests. If you focus the windows then the notification is no longer relevant so it will remove itself
 
@@ -665,7 +665,7 @@ Provides:
 - WindowMenuManager: 
 
 ## workspace.js
-![workspace.js](/media/gnome-shell-overlay-mode-windows.png)
+![workspace.js](./media/gnome-shell-overlay-mode-windows.png)
 - WindowCloneLayout: 
 - WindowClone: The thumbnail of a window that you see in the windows tab of the `Overview`. You can click to activate it, drag it to move it between workspaces. One per window actor
 - WindowOverlay: This defines items that are overlaid on the `WindowsClone`. In particular, The windows's caption and the close button that you see on each window in the `Overview`
@@ -681,11 +681,11 @@ Provides:
 - WorkspacesDisplay: This is essentially the `Windows` tab in the `Overview`. On the right hand side it has a sidebar showing workspace thumbnails that you can choose; this is a [workspaceThumbnail.ThumbnailsBox](#workspacethumbnailjs). The part that shows all the window thumbnails is a `WorkspacesView`. This class handles things like when the workspaces preview sidebar (ThumbnailsBox) should be slidden out and in. showing/animating the rectangle about the current workspace in the sidebar animating when dynamic workspaces are added/removed, changing workspaces on scrollin ove the sidebar, etc
 
 ## workspaceSwitcherPopup.js
-![workspaceSwitcherPopup.js](/media/workspaceswitcherpopup.png)
+![workspaceSwitcherPopup.js](./media/workspaceswitcherpopup.png)
 - WorkspaceSwitcherPopup: This is the popup that appears when you switch workspaces via keybindings, showing which workspace you've switched to
 
 ## workspaceThumbnail.js
-![workspaceThumbnail.js](/media/workspacethumbnail.png)
+![workspaceThumbnail.js](./media/workspacethumbnail.png)
 - PrimaryActorLayout: 
 - WindowClone: This is a thumbnail of a window (used in a `WorkspaceThumbnail`) - one per window. It can be dragged to another workspace to switch its workspace
 - WorkspaceThumbnail: This is a thumbnail of a workspace, one per workspace. Shows thumbnails of all the windows on that workspace. It is an up-to-date snapshot of its windows (updates when windows are `Added/Removed/Minimized/State Changed`)
@@ -697,7 +697,7 @@ Provides:
 #Components
 
 ## automountManager.js
-![automountManager.js](/media/automountmanager.png)
+![automountManager.js](./media/automountmanager.png)
 - AutomountManager: Uses `ConsoleKit` to listen for drives being added, removed, connected, disconnected, ejected, etc and automounts the drive
 
 ## autorunManager.js
@@ -712,19 +712,19 @@ Provides:
 - ComponentManager: 
 
 ## keyring.js
-![keyring.js](/media/keyring.png)
+![keyring.js](./media/keyring.png)
 - KeyringDialog: A [modalDialog.ModalDialog](#modaldialogjs) that is a dialog for `gnome-keyring`
 - KeyringDummyDialog: 
 - KeyringPrompter: 
 
 ## networkAgent.js
-![networkAgent.js](/media/networkagent.png)
+![networkAgent.js](./media/networkagent.png)
 - NetworkSecretDialog: Dialog that pops up getting you to enter in your password for wifi
 - VPNRequestHandler: Handles authentication requests for VPN
 - NetworkAgent: Listens for `NetworkAgent` on DBus - handles authentication requests
 
 ## polkitAgent.js
-![polkitAgent.js](/media/polkitagent.png)
+![polkitAgent.js](./media/polkitagent.png)
 - AuthenticationDialog: The [modalDialog.ModalDialog](#modaldialogjs) that appears when you have to enter your password to authenticate
 - AuthenticationAgent: Wrapper around `Shell.PolkitAuthenticationAgent`, listens for authentication requests and shows the `AuthenticationDialog`
 
@@ -741,20 +741,20 @@ Provides:
 These files define the standar status indicators in the status are
 
 ## accessibility.js
-![accessibility.js](/media/accessibility.png)
+![accessibility.js](./media/accessibility.png)
 - ATIndicator: The [panelMenu.Button](#panelmenujs) defining the accessibility indicator. This provides a number of [popupMenu.PopupSwitchMenuItem](#popupmenujs)s allowing you to toggle on and off various accessibility features
 - ATGreeterIndicator: 
 
 ## bluetooth.js
-![bluetooth.js](/media/bluetooth.png)
+![bluetooth.js](./media/bluetooth.png)
 - Indicator: The [panelMenu.SystemIndicator](#panelmenujs) defining the bluetooth indicator.
 
 ## brightness.js
-![brightness.js](/media/brightness.png)
+![brightness.js](./media/brightness.png)
 - Indicator: The [panelMenu.SystemIndicator](#panelmenujs) defining the brightness indicator.
 
 ## keyboard.js 2
-![keyboard.js](/media/keyboard-indicator.png)
+![keyboard.js](./media/keyboard-indicator.png)
 - LayoutMenuItem: Extends [popupMenu.PopupMenuItem](#popupmenujs). Consists of text and an either label with the keyboard layout's abbreviation.
 - InputSource: 
 - InputSourcePopup: 
@@ -771,7 +771,7 @@ These files define the standar status indicators in the status are
 - GeolocationDialog: 
 
 ## network.js
-![network.js](/media/network.png)
+![network.js](./media/network.png)
 - NMConnectionItem: 
 - NMConnectionSection: 
 - NMConnectionDevice: 
@@ -789,7 +789,7 @@ These files define the standar status indicators in the status are
 Also contains functions for comparing `SSID`s and converting signal strengths to a category `excellent/good/ok/weak`
 
 ## power.js
-![power.js](/media/power.png)
+![power.js](./media/power.png)
 - Indicator: The [panelMenu.SystemIndicator](#panelmenujs) defining the power indicator. Displays an appropiate icon for your current power state as well as calculating estimated battery life, etc
 
 ## rfkill.js
@@ -800,12 +800,12 @@ Also contains functions for comparing `SSID`s and converting signal strengths to
 - Indicator: 
 
 ## system.js
-![system.js](/media/system.png)
+![system.js](./media/system.png)
 - AltSwitcher: 
 - Indicator: 
 
 ## volume.js
-![volume.js](/media/volume.png)
+![volume.js](./media/volume.png)
 - StreamSlider: 
 - OutputStreamSlider: 
 - InputStreamSlider: 

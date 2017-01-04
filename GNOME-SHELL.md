@@ -3,8 +3,8 @@
 
 #GNOME Shell Parts
 ## Overview
-![GNOME Shell](/media/gnome-shell-overview-labeled.png)
+![GNOME Shell](./media/gnome-shell-overview-labeled.png)
 ## Overlay Mode Applications
-![GNOME Shell](/media/gnome-shell-overlay-mode-applications.png)
+![GNOME Shell](./media/gnome-shell-overlay-mode-applications.png)
 ## Overlay Mode Windows
-![GNOME Shell](/media/gnome-shell-overlay-mode-windows-labeled.png)
+![GNOME Shell](./media/gnome-shell-overlay-mode-windows-labeled.png)

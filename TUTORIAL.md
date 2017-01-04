@@ -7,7 +7,7 @@ Finally! Now, we do our first simple extension, a simple hello world. For do tha
 gnome-shell-extension-tool --create-extension
 ```
 
-![terminal](/media/gnome-shell-extension-tool-create-extension.png)
+![terminal](./media/gnome-shell-extension-tool-create-extension.png)
 
 Then you are asked about the name of your application. For this extension we put in `my first extension` and press enter.
 
