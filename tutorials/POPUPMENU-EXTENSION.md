@@ -83,7 +83,7 @@ const PopupMenuExample = new Lang.Class({
 		/*
 		A new icon 'system-search-symbolic'.symbolic
 		All icons are found in `/usr/share/icons/theme-being-used`
-		In other tutorial will teach you how to use your own icons
+		In other tutorials we will teach you how to use your own icons
 
 		The class 'system-status-icon` is very useful, remove it and restart the shell then you will see why it is useful here
 		*/
@@ -139,10 +139,10 @@ const PopupMenuExample = new Lang.Class({
 
 /*
 The following three object.connect(`signal`, Lang.bind(this, callback) are special functions
-`signal`: there are many signals, you will see more in the comming up tutorials
-Lang.bin(this, callback: You need to always include this
+`signal`: there are many signals, you will see more in other tutorials
+Lang.bin(this, callback): You will always need to include this
 	callback is the function being called when `signal` is fired
-		by default the first paramenter is the object that sent the signal
+		by default the first paramenter is the object that fired the signal
 */
 		/*
 		With PopupSwitchMenuItem you can use the signal `toggled` and do interesting stuff with it
