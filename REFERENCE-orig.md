@@ -131,7 +131,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - AccessDialog:
 - AccessDialogDBus:
 
-## [altTab.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/altTab.js)
+## altTab.js
 ![altTab.js](./media/alttab.png)
 - AppSwitcherPopup: 
 - CyclerHighlight: 
@@ -145,11 +145,11 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - WindowIcon: 
 - WindowList: 
 
-## [animation.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/animation.js)
+## animation.js
 - Animation: 
 - AnimatedIcon: Generate a animated icon (this is used for the "waves" when you reach the hot corner of the panel) 
 
-## [appDisplay.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/appDisplay.js)
+## appDisplay.js
 ![appDisplay.js](./media/gnome-shell-overlay-mode-applications.png)
 - BaseAppView: 
 - PageIndicatorsActor: 
@@ -165,14 +165,14 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - AppIcon: An icon for an app
 - AppIconMenu: The `right-click` menu of an App containing the relevant actions `New Window/Remove from favourites/Add to favourites/etc`
 
-## [appFavorites.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/appFavorites.js)
+## appFavorites.js
 - AppFavorites: Handles your list of app favourites - updates the list when you choose `Add to Favourite`, provides API for you to `add/remove` from your favourites
 
-## [audioDeviceSelection.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/audioDeviceSelection.js)
+## audioDeviceSelection.js
 - AudioDeviceSelectionDialog: 
 - AudioDeviceSelectionDBus: 
 
-## [background.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/background.js)
+## background.js
 - BackgroundCache: 
 - Background: 
 - SystemBackground: 
@@ -180,16 +180,16 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 - Animation: 
 - BackgroundManager: 
 
-## [backgroundMenu.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/backgroundMenu.js)
+## backgroundMenu.js
 - BackgroundMenu: 
 
-## [boxpointer.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/boxpointer.js)
+## boxpointer.js
 ![BoxPointer.js](./media/boxpointer.png)
 > BoxPointer is the triangle bit
 
 - BoxPointer: The triangle arrow connecting a `[popupMenu](#popupmenujs)` to its source (you can configure what side of the menu the pointer appears).
 
-## [calendar.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/calendar.js)
+## calendar.js
 ![Calendar.js](./media/calendar.png)
 - Contains several functions for manipulating date formats, day abbreviations, etc
 - CalendarEvent: An event in the calendar
@@ -205,17 +205,17 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 
 See also [dateMenu.js](#datemenujs) which ties all these elements together
 
-## [checkBox.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/checkBox.js)
+## checkBox.js
 ![checkBox.js](./media/checkbox.png)
 - CheckBox: Checkbox itself
 
-## [ctrlAltTab.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/ctrlAltTab.js)
+## ctrlAltTab.js
 ![ctrlAltTab.js](./media/ctrlalttab.png)
 - CtrlAltTabManager: Handles `CTRL + ALT + Tab` behaviour - showing the popup, setting up the stage to be ready for keyboard navigation
 - CtrlAltTabPopup: The UI popup itself
 - CtrlAltTabSwitcher: UI element holding all the options you `ALT + Tab` between
 
-## [dash.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/dash.js)
+## dash.js
 ![dash.js](./media/dash.png)
 - DashItemContainer: Helper class - each item in the dash is one of these
 - ShowAppsIcon: 
@@ -224,7 +224,7 @@ See also [dateMenu.js](#datemenujs) which ties all these elements together
 - DashActor: 
 - Dash: The master `Dash` class, making use of all the other classes
 
-## [dateMenu.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/dateMenu.js)
+## dateMenu.js
 ![dash.js](./media/datemenu.png)
 > The date menu. Red: DateMenuButton, Green: TodayButton, Yellow: WorldClockSection
 
@@ -237,7 +237,7 @@ See also [dateMenu.js](#datemenujs) which ties all these elements together
 
 See also [calendar.js](#calendarjs)
 
-## [dnd.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/dnd.js)
+## dnd.js
 This allow you to add `drag-and-drop` functionality to your own classes. You use the following functions defined in the file:
 
 - addDragMonitor: You define an object defining the drag behaviour you want, and use `addDragMonitor` to add it. A drag monitor is an object with the key `dragMonitor` whick is a callback for what happens when a drag monitor event occurs 
@@ -247,14 +247,14 @@ See [dash.js](#dashjs) and [workspacesView.js](#workspacesviewjs) for examples
  
 - _Draggable: Class defining a basic draggable item, defining how the dragging happens. You do not use this directly, Instead, use `makeDraggable` to make an actor draggable
 
-## [edgeDragAction.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/edgeDragAction.js)
+## edgeDragAction.js
 - EdgeDragAction: 
 
-## [endSessionDialog.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/endSessionDialog.js)
+## endSessionDialog.js
 ![endSessionDialog.js](./media/endsessiondialog-1.png) ![endSessionDialog.js](./media/endsessiondialog-2.png)
 - EndSessionDialog: The end session dialog. Handles the UI part. In terms of actually `logging out/shutting down/etc` the dialog simply sends a message to the GNOME `SessionManager` DBus to request a shutdown rather thant doing the shutdown itself
 
-## [environment.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/environment.js)
+## environment.js
 This module sets upd the `GJS` environment for the rest of the JS files:
 - Adds up the `global` object to the environment
 - Adds the `add` function to `St.BoxLayout`
@@ -263,7 +263,7 @@ This module sets upd the `GJS` environment for the rest of the JS files:
 - Adds method `String.format`
 - Initialises various things the shell needs to work
 
-## [extensionDownloader.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/extensionDownloader.js)
+## extensionDownloader.js
 ![extensionDownloader.js](./media/extensiondownloader.png)
 
 This is a collection of functions to do with installing, updating and uninstalling extensions
@@ -275,7 +275,7 @@ This is a collection of functions to do with installing, updating and uninstalli
 
 - InstallExtensionDialog: The dialog that pops up when you choose to install an extension from [GNOME Shell Extensions](https://extensions.gnome.org/) confirming that you want to install the extension
 
-## [extensionSystem.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/extensionSystem.js)
+## extensionSystem.js
 This is a collection of functions to do with enabling and disabling extensions, and accessing their metadata
 > You can access extensions and their metadata using `imports.misc.extensionUtils.extensions`. Use `imports.misc.extensionUtils.getCurrentExtension()` from withing an extension to get the object for that extension
 
@@ -284,43 +284,43 @@ This is a collection of functions to do with enabling and disabling extensions, 
 - disableExtension: Disables an extension by UUID
 - enableExtension: Enables an extension by UUID
 
-## [focusCaretTracker.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/focusCaretTracker.js)
+## focusCaretTracker.js
 - FocusCaretTracker: 
 
-## [grabHelper.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/grabHelper.js)
+## grabHelper.js
 - GrabHelper: 
 
-## [ibusCandidatePopup.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/ibusCandidatePopup.js)
+## ibusCandidatePopup.js
 - CandidateArea: 
 - CandidatePopup: 
 
-## [iconGrid.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/iconGrid.js)
+## iconGrid.js
 - BaseIcon: A basic icon class consisting of an icon and a label
 - IconGrid: A widget displaying its children in a grid allowing you to set a row limit or column limit, and actors that don't fit in will not be painted
 - PaginatedIconGrid: 
 
-## [keyboard.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/status/keyboard.js)
+## keyboard.js
 ![keyboard.js](./media/keyboard.png)
 - Key: A key on the keyboard
 - Keyboard: The `Keyboard` class
 - KeyboardSource: Inherits from [MessageTray.Source](#messagetrayjs), shows the keyboard in the message tray
 - ShellWaylandAdapter: 
 
-## [layout.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/layout.js)
+## layout.js
 - MonitorConstraint: 
 - Monitor: 
 - LayoutManager: Manages layout of items on the stage `Messsage Tray/Top Panel/Hot Corners` and updates when monitors change
 - HotCorner: Hot corners. The `Top Left` hot corner lets you switch to the overview
 - PressureBarrier: 
 
-## [legacyTray.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/legacyTray.js)
+## legacyTray.js
 - LegacyTray: 
 
-## [lightbox.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/lightbox.js)
+## lightbox.js
 - RadialShaderQuad: 
 - Lightbox: A shade obscuring the specific container actor
 
-## [lookingGlass.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/lookingGlass.js)
+## lookingGlass.js
 ![lookingGlass.js](./media/lookingglass-autocomplete.png)
 > Autocomplete function in the Looking Glass
 
@@ -343,18 +343,18 @@ This is a collection of functions to do with enabling and disabling extensions, 
 - Extensions: The `Extensions` tab in the Looking Glass
 - LookingGlass: Assembles the whole Looking Glass together. Also privedes the `Evaluator` tab and handles the actual evaluation of commands typed into the console
 
-## [magnifierDBus.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/magnifierDBus.js)
+## magnifierDBus.js
 - ShellMagnifier: 
 - ShellMagnifierZoomRegion: 
 
-## [magnifier.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/magnifier.js)
+## magnifier.js
 ![magnifier.js](./media/magnifier.png)
 - Magnifier: Defines the shell magnifier
 - ZoomRegion: Defines a particular zoom region
 - Crosshairs: Defines the crosshairs of the magnifier
 - MagShaderEffects: 
 
-## [main.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/main.js)
+## main.js
 This file is like the `int main();` of programs, setting up the whole GNOME Shell interface and making parts available to everyone else (`Top Panel/Overview/Message Tray/...`). Many global objects in GNOME Shell create just one instance. These are stored here.
 This file also handles dynamic workspaces (when you have no windows left on a workspace it is removed).
 
@@ -382,14 +382,14 @@ This file also handles dynamic workspaces (when you have no windows left on a wo
 
 - RestartMessage: 
 
-## [messageList.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/messageList.js)
+## messageList.js
 - URLHighlighter: Class to markup URLs in notifications
 - ScaleLayout: 
 - LabelExpanderLayout: 
 - Message: 
 - MessageListSection: 
 
-## [messageTray.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/messageTray.js)
+## messageTray.js
 ![messageTray.js](./media/messagetray.png)
 - FocusGrabber: Grab and control the focus for the message tray. We need this because the focus acts diferently depending of the siutation for the message tray.
 - NotificationPolicy: 
@@ -405,17 +405,17 @@ This file also handles dynamic workspaces (when you have no windows left on a wo
 
 If you wish to create notifications, the `MessageTray.Source` is the class you subclass. You need to implement the `createNotificationIcon` function at a minimum. When you want to send a notification from that source, use `source.notify(notification)`, where `notification` is a `MessageTray.Notification` or subclass thereof
 
-## [modalDialog.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/modalDialog.js)
+## modalDialog.js
 - ModalDialog: A handy class defining a modal dialog. Use `.setButtons` to add buttons to it, and `open/close` to show or hide it.
 
 Examples [endSessionDialog.js](#endsessiondialogjs), [extensionDownloader.js](#extensiondownloaderjs)...
 
-## [mpris.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/mpris.js)
+## mpris.js
 - MediaMessage: 
 - MprisPlayer: 
 - MediaSection: 
 
-## [notificationDaemon.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/notificationDaemon.js)
+## notificationDaemon.js
 - FdoNotificationDaemon: 
 - FdoNotificationDaemonSource: 
 - GtkNotificationDaemonNotification: 
@@ -423,17 +423,17 @@ Examples [endSessionDialog.js](#endsessiondialogjs), [extensionDownloader.js](#e
 - GtkNotificationDaemon: 
 - NotificationDaemon: GNOME Shell uses DBus to listen/send notifications; this handles that
 
-## [osdMonitorLabeler.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/osdMonitorLabeler.js)
+## osdMonitorLabeler.js
 - OsdMonitorLabel: 
 - OsdMonitorLabeler: 
 
-## [osdWindow.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/osdWindow.js)
+## osdWindow.js
 - LevelBar: 
 - OsdWindowConstraint: 
 - OsdWindow: 
 - OsdWindowManager: 
 
-## [overviewControls.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/overviewControls.js)
+## overviewControls.js
 - SlideLayout: 
 - SlidingControl: 
 - ThumbnailsSlider: 
@@ -442,14 +442,14 @@ Examples [endSessionDialog.js](#endsessiondialogjs), [extensionDownloader.js](#e
 - ControlsLayout: 
 - ControlsManager: 
 
-## [overview.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/overview.js)
+## overview.js
 ![overview.js](./media/gnome-shell-overlay-mode-windows.png)
 - ShellInfo: Handles spawning notification for actions performed from the overview and undoing them
 - Overview: The `Overview` triggered when you press the `Super` key. Made up of various tabs defined in other classes. Code in here is to do with animation when the overview shows and hides, loading search providers, interaction with the overview and so on
 
 See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDisplay.js](#appdisplayjs) and the core `Windows` tab [workspacesView.WorkspaceDisplay](workspacesviewjs)
 
-## [padOsd.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/padOsd.js)
+## padOsd.js
 - KeybindingEntry: 
 - ActionComboBox: 
 - ActionEditor: 
@@ -457,7 +457,7 @@ See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDis
 - PadOsd: 
 - PadOsdService: 
 
-## [panel.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/panel.js)
+## panel.js
 ![panel.js](./media/panel-1.png)
 > The panel. Yellow: _leftBox, Green: _centerBox, Red: _rightBox
 
@@ -478,7 +478,7 @@ See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDis
     - _rightBox, `Main.panel._rightBox`: Contains the `AggregateMenu`/`Status Area`. However when you want to insert icons into the `Status Area` you should use `Main.panel.addToStatusArea(role, myButton, position)` where `role` is the role that button performs (`network`, `a11y`, ...). There can only be one button performing each role in the `Status Area`
 
 
-## [panelMenu.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/panelMenu.js)
+## panelMenu.js
 ![panelMenu.js](./media/panelmenu.png)
 > Example of a panelMenu.Button, being the indicator and menu where the indicator is an icon
 
@@ -486,11 +486,11 @@ See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDis
 - Button: Inherits from [panelMenu.ButtonBox](#panelmenujs) - adds a menu. So this is an object for use in the `Panel` that will have a menu and some sort of display item (e.g. an icon), which you are responsible for defining and adding. The [dateMenu.DateMenuButton](#datemenujs) is an example of this
 - SystemIndicator: This is just a `Button` with an icon. Feed it in an icon name (one of the stock icon names) and it will display it. Just about every icon you have in your `Status Area` is one of these
 
-## [pointerWatcher.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/pointerWatcher.js)
+## pointerWatcher.js
 - PointerWatch: 
 - PointerWatcher: 
 
-## [popupMenu.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/popupMenu.js)
+## popupMenu.js
 ![popupMenu.js](./media/popupmenu-1.png)
 ![popupMenu.js](./media/popupmenu-2.png)
 - PopupBaseMenuItem: Base class for popup menu items - and empty popup menu item. Has an `activate` signal that gets fired when the item is activated. Use `.addActor` to add visual elements to it like a `St.Label`. All the other `Popup*MenuItem` classes inherit from this.
@@ -507,18 +507,18 @@ See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDis
 - PopupSubMenuMenuItem: A `PopupBaseMenuItem` defining a collapsible submenu - click on it to expand/open the submenu and reveal the items inside. It is really just a `PopupBaseMenuItem` with label and a `PopupSubMenu`. Use `myItem.menu.addMenuItem` to add to its menu.
 - PopupMenuManager:  Extracted from source `Basic implementation of a menu manager. Call addMenu to add menus`
 
-## [remoteMenu.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/remoteMenu.js)
+## remoteMenu.js
 - RemoteMenuSeparatorItemMapper: 
 - RequestSubMenu: 
 - RemoteMenuSubmenuItemMapper: 
 - RemoteMenuItemMapper: 
 - RemoteMenu: 
 
-## [remoteSearch.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/remoteSearch.js)
+## remoteSearch.js
 - RemoteSearchProvider: A search provider that acts through DBus
 - RemoteSearchProvider2: 
 
-## [runDialog.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/runDialog.js)
+## runDialog.js
 ![runDialog.js](./media/rundialog.png)
 - RunDialog: The run dialog that you get on `ALT + F2`. Type commands in here to have them executed. Also defines a couple of `special` commands:
     - lg: opens the [Looking Glass](#lookingglassjs)
@@ -526,21 +526,21 @@ See also [viewSelector.js](#viewselectorjs), the core `Applications` tab [appDis
     - rt: Reloads the shell theme
     - debugexit: Quits the shell with debug info
 
-## [screencast.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/status/screencast.js)
+## screencast.js
 - ScreencastService: 
 
-## [screenShield.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/screenShield.js)
+## screenShield.js
 - Clock: 
 - NotificationsBox: 
 - Arrow: 
 - ScreenShield: 
 
-## [screenshot.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/screenshot.js)
+## screenshot.js
 - ScreenshotService: 
 - SelectArea: 
 - Flashspot: 
 
-## [scripting.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/scripting.js)
+## scripting.js
 **Documentation extracted from the source**
 This module provides functionality for driving the shell user interface in an automated fashion. The primary current use case for this is automated performance testing (see `runPerfScript()`), but it could be applied to other forms of automation, such as testing for correctness as well.
 
@@ -573,7 +573,7 @@ Provides:
 
 **See the source for full documentation.**
 
-## [search.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/search.js)
+## search.js
 - MaxWidthBin: 
 - SearchResult: Class representing a single result of a search in the `Overview`
 - ListSearchResult: 
@@ -586,22 +586,22 @@ Provides:
 
 **See the source for full documentation.**
 
-## [separator.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/separator.js)
+## separator.js
 - HorizontalSeparator: 
 
-## [sessionMode.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/sessionMode.js)
+## sessionMode.js
 - SessionMode: 
 
-## [shellDBus.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/shellDBus.js)
+## shellDBus.js
 - GnomeShell: 
 - GnomeShellExtensions: 
 - ScreenSaverDBus: 
 
-## [shellEntry.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/shellEntry.js)
+## shellEntry.js
 ![shellEntry.js](./media/shellentry.png)
 - EntryMenu: A subclass of [popupMenu.PopupMenu](#popupmenujs) used to provide a context menu to a `Clutter.Entry` or `St.Entry` (text box). Do not use this class directly; instead use `ShellEntry.addContextMenu(entry)`. The context menu acts like so: when the user `right-click` the entry, they get a popup menu with `Paste/Copy` and if it is a password dialog it will have a `Show/Hide character` item too
 
-## [shellMountOperation.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/shellMountOperation.js)
+## shellMountOperation.js
 ![shellMountOperation.js](./media/shellmountoperation.png)
 - ListItem: A button displaying a particular application's icon and name, that will launch the application when clicked. These are used in the `ShellProcessesDialog`, one per application that impedes the removal of a device
 - ShellMountOperation: 
@@ -611,38 +611,38 @@ Provides:
 - ShellProcessesDialog: Extends [modalDialog.ModalDialog](#modaldialogjs) to provide a dialog that shows you which applications are impeding the removal of a device
 - GnomeShellMountOpHandler: 
 
-## [slider.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/slider.js)
+## slider.js
 - Slider: 
 
-## [switcherPopup.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/switcherPopup.js)
+## switcherPopup.js
 - SwitcherPopup: 
 - SwitcherList: 
 
-## [tweener.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/tweener.js)
+## tweener.js
 - ClutterFrameTicker: 
 
 **See the source for full documentation.**
 
-## [unlockDialog.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/unlockDialog.js)
+## unlockDialog.js
 - UnlockDialog: 
 
-## [userWidget.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/userWidget.js)
+## userWidget.js
 - Avatar: 
 - UserWidgetLabel: 
 - UserWidget: 
 
-## [viewSelector.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/viewSelector.js)
+## viewSelector.js
 - FocusTrap: 
 - TouchpadShowOverviewAction: 
 - ShowOverviewAction: 
 - ViewSelector: 
 
-## [windowAttentionHandler.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/windowAttentionHandler.js)
+## windowAttentionHandler.js
 ![shellMountOperation.js](./media/windowattentionhandler.png)
 - WindowAttentionHandler: Handles `window-demands-attention` signals from `global.display` and pops up the `x is ready` notification upon receiving it. When you start up and app it can take a while to load and in the meantime you move on to another window; when the window does actually load you get a notification letting you know the application is ready to be used
 - Source: A [messageTray.Source](#messagetrayjs) tailored to window attention requests. If you focus the windows then the notification is no longer relevant so it will remove itself
 
-## [windowManager.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/windowManager.js)
+## windowManager.js
 - DisplayChangeDialog: 
 - WindowDimmer: When created with an actor (for example a `Meta.WindowActor`), dims that actor. For example when you open a modal dialog from a window, that window is dimmed until you are finished with the modal dialog
 - WorkspaceTracker: 
@@ -659,12 +659,12 @@ Provides:
     - Showing the window switcher `ALT + Tab` popup, and
     - Showing the accesibility switcher `CTRL + ALT + Tab` popup
 
-## [windowMenu.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/windowMenu.js)
+## windowMenu.js
 - WindowMenu: 
 - AppMenu: 
 - WindowMenuManager: 
 
-## [workspace.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/workspace.js)
+## workspace.js
 ![workspace.js](./media/gnome-shell-overlay-mode-windows.png)
 - WindowCloneLayout: 
 - WindowClone: The thumbnail of a window that you see in the windows tab of the `Overview`. You can click to activate it, drag it to move it between workspaces. One per window actor
@@ -673,34 +673,34 @@ Provides:
 - UnalignedLayoutStrategy: 
 - Workspace: Represents a collection of `WindowOverlay`s in the `Overview`. Each one just looks after the overlays in its own workspace and monitor. It handles how to lay out its overlays. This is not the workspace preview you see in the workspaces sidebar, that is a [workspaceThumbnail.WorkspaceThumbnail](#workspacethumbnailjs)
 
-## [workspacesView.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/workspacesView.js)
+## workspacesView.js
 - WorkspacesViewBase: 
 - WorkspacesView: A container for many [workspace.Workspace](#workspacejs)s
 - ExtraWorkspaceView: 
 - DelegateFocusNavigator: 
 - WorkspacesDisplay: This is essentially the `Windows` tab in the `Overview`. On the right hand side it has a sidebar showing workspace thumbnails that you can choose; this is a [workspaceThumbnail.ThumbnailsBox](#workspacethumbnailjs). The part that shows all the window thumbnails is a `WorkspacesView`. This class handles things like when the workspaces preview sidebar (ThumbnailsBox) should be slidden out and in. showing/animating the rectangle about the current workspace in the sidebar animating when dynamic workspaces are added/removed, changing workspaces on scrollin ove the sidebar, etc
 
-## [workspaceSwitcherPopup.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/workspaceSwitcherPopup.js)
+## workspaceSwitcherPopup.js
 ![workspaceSwitcherPopup.js](./media/workspaceswitcherpopup.png)
 - WorkspaceSwitcherPopup: This is the popup that appears when you switch workspaces via keybindings, showing which workspace you've switched to
 
-## [workspaceThumbnail.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/workspaceThumbnail.js)
+## workspaceThumbnail.js
 ![workspaceThumbnail.js](./media/workspacethumbnail.png)
 - PrimaryActorLayout: 
 - WindowClone: This is a thumbnail of a window (used in a `WorkspaceThumbnail`) - one per window. It can be dragged to another workspace to switch its workspace
 - WorkspaceThumbnail: This is a thumbnail of a workspace, one per workspace. Shows thumbnails of all the windows on that workspace. It is an up-to-date snapshot of its windows (updates when windows are `Added/Removed/Minimized/State Changed`)
 - ThumbnailsBox: This is a collection of workspace thumbnails (the workspaces sidebar you see in the `Overview`). Handles the sliding in or out of workspaces as they are `Added/Destroyed`, and also dragging windows to create new workspaces between existing ones
 
-## [xdndHandler.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/xdndHandler.js)
+## xdndHandler.js
 - XdndHandler: Sets up `Xdnd` and passes through signals. When a `non-gnome-shell object` is first dragged over a `gnome-shell-object`, tha handler fires a `drag-begin` signal. When the object being dragged leaves the `gnome-shell-object`, the `drage-end` signal is fired. The class somehow incorporates with [dnd.js](#dndjs) code too whereby a draggable target/object registered with `dnd.js` has the appropiate events called on it. Use `Main.xdndHandler` to access the instance of the handler and connect to its signals.
 
 # Components
 
-## [automountManager.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/components/automountManager.js)
+## automountManager.js
 ![automountManager.js](./media/automountmanager.png)
 - AutomountManager: Uses `ConsoleKit` to listen for drives being added, removed, connected, disconnected, ejected, etc and automounts the drive
 
-## [autorunManager.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/components/autorunManager.js)
+## autorunManager.js
 - HotplugSniffer: Listens on the DBus for something...
 - ContentTypeDiscoverer: Guesses what content is on a media `Filesystem/Photos/Documents/Media`
 - AutorunManager: Master class that handles monitoring when volumens are mounted/dismounted, uses the other classes in the file to determine what content is on the media and send a notification with the right options for that media on it (If it is a camera card offer to view photos, if it is music offer to play it, ...)
@@ -708,27 +708,27 @@ Provides:
 - AutorunSource: Inherits from [messageTray.Source](#messagetrayjs). The notification source for the autorun notification that you get upon plugging in a device.
 - AutorunNotification: Inherits from [messageTray.Notification](#messagetrayjs). Handles the creation of the transient notification you get upon plugging in a device. This is the notification that says `View photos with Shotwel`, `Play music`, `Browse Files`, etc
 
-## [__init__.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/components/__init__.js)
+## __init__.js
 - ComponentManager: 
 
-## [keyring.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/components/keyring.js)
+## keyring.js
 ![keyring.js](./media/keyring.png)
 - KeyringDialog: A [modalDialog.ModalDialog](#modaldialogjs) that is a dialog for `gnome-keyring`
 - KeyringDummyDialog: 
 - KeyringPrompter: 
 
-## [networkAgent.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/components/networkAgent.js)
+## networkAgent.js
 ![networkAgent.js](./media/networkagent.png)
 - NetworkSecretDialog: Dialog that pops up getting you to enter in your password for wifi
 - VPNRequestHandler: Handles authentication requests for VPN
 - NetworkAgent: Listens for `NetworkAgent` on DBus - handles authentication requests
 
-## [polkitAgent.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/components/polkitAgent.js)
+## polkitAgent.js
 ![polkitAgent.js](./media/polkitagent.png)
 - AuthenticationDialog: The [modalDialog.ModalDialog](#modaldialogjs) that appears when you have to enter your password to authenticate
 - AuthenticationAgent: Wrapper around `Shell.PolkitAuthenticationAgent`, listens for authentication requests and shows the `AuthenticationDialog`
 
-## [telepathyClient.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/components/telepathyClient.js)
+## telepathyClient.js
 - TelepathyClient: 
 - ChatSource: 
 - ChatNotification: 
@@ -740,20 +740,20 @@ Provides:
 # Status Indicators
 These files define the standar status indicators in the status are
 
-## [accessibility.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/status/accessibility.js)
+## accessibility.js
 ![accessibility.js](./media/accessibility.png)
 - ATIndicator: The [panelMenu.Button](#panelmenujs) defining the accessibility indicator. This provides a number of [popupMenu.PopupSwitchMenuItem](#popupmenujs)s allowing you to toggle on and off various accessibility features
 - ATGreeterIndicator: 
 
-## [bluetooth.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/status/bluetooth.js)
+## bluetooth.js
 ![bluetooth.js](./media/bluetooth.png)
 - Indicator: The [panelMenu.SystemIndicator](#panelmenujs) defining the bluetooth indicator.
 
-## [brightness.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/status/brightness.js)
+## brightness.js
 ![brightness.js](./media/brightness.png)
 - Indicator: The [panelMenu.SystemIndicator](#panelmenujs) defining the brightness indicator.
 
-## [keyboard.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/status/keyboard.js)
+## keyboard.js 2
 ![keyboard.js](./media/keyboard-indicator.png)
 - LayoutMenuItem: Extends [popupMenu.PopupMenuItem](#popupmenujs). Consists of text and an either label with the keyboard layout's abbreviation.
 - InputSource: 
@@ -765,12 +765,12 @@ These files define the standar status indicators in the status are
 - InputSourceManager: 
 - InputSourceIndicator: 
 
-## [location.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/status/location.js)
+## location.js
 - Indicator: 
 - AppAuthorizer: 
 - GeolocationDialog: 
 
-## [network.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/status/network.js)
+## network.js
 ![network.js](./media/network.png)
 - NMConnectionItem: 
 - NMConnectionSection: 
@@ -788,23 +788,23 @@ These files define the standar status indicators in the status are
 
 Also contains functions for comparing `SSID`s and converting signal strengths to a category `excellent/good/ok/weak`
 
-## [power.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/status/power.js)
+## power.js
 ![power.js](./media/power.png)
 - Indicator: The [panelMenu.SystemIndicator](#panelmenujs) defining the power indicator. Displays an appropiate icon for your current power state as well as calculating estimated battery life, etc
 
-## [rfkill.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/status/rfkill.js)
+## rfkill.js
 - RfkillManager: 
 - Indicator: 
 
-## [screencast.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/status/screencast.js)
+## screencast.js
 - Indicator: 
 
-## [system.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/status/system.js)
+## system.js
 ![system.js](./media/system.png)
 - AltSwitcher: 
 - Indicator: 
 
-## [volume.js](https://github.com/GNOME/gnome-shell/tree/master/js/ui/status/volume.js)
+## volume.js
 ![volume.js](./media/volume.png)
 - StreamSlider: 
 - OutputStreamSlider: 
@@ -815,7 +815,7 @@ Also contains functions for comparing `SSID`s and converting signal strengths to
 
 # Files `imports.misc`
 
-## [config.js](https://github.com/GNOME/gnome-shell/tree/master/js/misc/config.js)
+## config.js
 Contains the constants:
 - PACKAGE_NAME: `gnome-shell` (non-localized name of the package).
 - PACKAGE_VERSION: your gnome-shell version, a string (e.g. '3.22.2').
@@ -826,7 +826,7 @@ Contains the constants:
 - LIBEXECDIR: /usr/libexe/
 - SYSCONFDIR: /etc
 
-## [extensionUtils.js](https://github.com/GNOME/gnome-shell/tree/master/js/misc/extensionUtils.js)
+## extensionUtils.js
 Contains the extensions object (maps UUID to extension object, described in `createExtensionObject`)
 - Helpful functions:
     - `getCurrentExtension`: call it from your extension file to get the current extension object (`imports.misc.extensionUtils.getCurrentExtension()`).
@@ -836,21 +836,21 @@ Contains the extensions object (maps UUID to extension object, described in `cre
 
 - ExtensionFinder: 
 
-## [fileUtils.js](https://github.com/GNOME/gnome-shell/tree/master/js/misc/fileUtils.js)
+## fileUtils.js
 Functions:
 - deleteGFile: deletes a `Gio` file object ("work around `delete` being a keyword in JS" -- just calls `file['delete'](null)`).
 - recursivelyDeleteDir: recursively deletes a directory.
 - recursivelyMoveDir: recursively move a directory.
 
-## [gnomeSession.js](https://github.com/GNOME/gnome-shell/tree/master/js/misc/gnomeSession.js)
+## gnomeSession.js
 
-## [history.js](https://github.com/GNOME/gnome-shell/tree/master/js/misc/history.js)
+## history.js
 - HistoryManager: An object that remembers text up to 512 items `DEFAULT_LIMIT` and optionally saves them into a `gsettings` key
 
-## [ibusManager.js](https://github.com/GNOME/gnome-shell/tree/master/js/misc/ibusManager.js)
+## ibusManager.js
 - IBusManager: 
 
-## [jsParse.js](https://github.com/GNOME/gnome-shell/tree/master/js/misc/jsParse.js)
+## jsParse.js
 This is a set of functions doing some basic parsing of javascript code in order to provide sensible autocompletions.
 
 The main function you will probably want to call from external modules (according to the source) is `getCompletions(text, commandHeader, globalCompletionList)`.
@@ -858,29 +858,29 @@ There are a whole bunch of other helper functions in there too.
 
 **See the source for full documentation.**
 
-## [keyboardManager.js](https://github.com/GNOME/gnome-shell/tree/master/js/misc/keyboardManager.js)
+## keyboardManager.js
 - KeyboardManager: 
 
-## [loginManager.js](https://github.com/GNOME/gnome-shell/tree/master/js/misc/loginManager.js)
+## loginManager.js
 - LoginManagerSystemd: 
 - LoginManagerDummy: 
 
-## [modemManager.js](https://github.com/GNOME/gnome-shell/tree/master/js/misc/modemManager.js)
+## modemManager.js
 - ModemGsm: Class for interacting with DBus interface `org.freedesktop.ModemManager.Modem.Gsm.Network` (mobile internet).
 - ModemCdma: Class for interacting with DBus interface `org.freedesktop.ModemManager.Modem.Cdma` (mobile internet).
 - BroadbandModem: 
 
-## [objectManager.js](https://github.com/GNOME/gnome-shell/tree/master/js/misc/objectManager.js)
+## objectManager.js
 - ObjectManager: 
 
-## [params.js](https://github.com/GNOME/gnome-shell/tree/master/js/misc/params.js)
+## params.js
 Contains a handy function parse that parses user-provided parameters against default parameters (filling in with defaults if not supplied), 
 and throwing an error if unrecognised parameters are given (if unrecognised parameters are not allowed). Used throughout the `js/ui/*.js` code.
 
-## [smartcardManager.js](https://github.com/GNOME/gnome-shell/tree/master/js/misc/smartcardManager.js)
+## smartcardManager.js
 - SmartcardManager: 
 
-## [util.js](https://github.com/GNOME/gnome-shell/tree/master/js/misc/util.js)
+## util.js
 - Handful of utility functions:
     - findUrls: searches input string for URLs.
     - spawn: spawns a process specified by the argument in array form (e.g. `['ls', '-al', '$HOME']`), handling errors by popping up a notification in the message tray.
