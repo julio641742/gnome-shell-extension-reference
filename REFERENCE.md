@@ -127,7 +127,7 @@ Documentation for the Javascript files that make up GNOME Shell's Javascript sid
 
 # Overview of classes in each file
 
-## accessDialog.js
+## [accessDialog.js](https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/master/js/ui/accessDialog.js)
 - AccessDialog:
 - AccessDialogDBus:
 
